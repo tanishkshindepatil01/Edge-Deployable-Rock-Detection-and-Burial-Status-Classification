@@ -1,0 +1,23 @@
+{
+  "format": "NCNN FP32",
+  "model_path": "/home/tanishk/rock_edge_project/02_selected_model/05_ncnn_fp32/05_yolov8n_FP32_ncnn_model",
+  "source_image": "EDGE_TEST_034_image_160_0ae40e39_640x640.jpg",
+  "ground_truth_count": 1,
+  "predicted_count": 1,
+  "class_counts": {
+    "rock_completely_exposed": 0,
+    "rock_half_buried": 1
+  },
+  "detections": [
+    {
+      "box_xyxy": [
+        195.6875,
+        191.25,
+        389.8125,
+        307.0
+      ],
+      "class_id": 1,
+      "confidence": 0.7001953125
+    }
+  ]
+}
