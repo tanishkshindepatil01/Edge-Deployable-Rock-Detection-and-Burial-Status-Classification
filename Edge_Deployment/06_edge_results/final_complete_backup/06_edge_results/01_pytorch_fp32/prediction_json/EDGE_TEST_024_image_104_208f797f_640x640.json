@@ -1,0 +1,23 @@
+{
+  "format": "PyTorch FP32",
+  "model_path": "/home/tanishk/rock_edge_project/02_selected_model/01_pytorch_fp32/01_yolov8n_PyTorch_FP32.pt",
+  "source_image": "EDGE_TEST_024_image_104_208f797f_640x640.jpg",
+  "ground_truth_count": 1,
+  "predicted_count": 1,
+  "class_counts": {
+    "rock_completely_exposed": 1,
+    "rock_half_buried": 0
+  },
+  "detections": [
+    {
+      "box_xyxy": [
+        257.90179443359375,
+        73.28207397460938,
+        491.55047607421875,
+        304.438720703125
+      ],
+      "class_id": 0,
+      "confidence": 0.9334098100662231
+    }
+  ]
+}
