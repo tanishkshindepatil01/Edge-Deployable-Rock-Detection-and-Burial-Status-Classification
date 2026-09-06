@@ -1,0 +1,23 @@
+{
+  "format": "LiteRT/TFLite INT8",
+  "model_path": "/home/tanishk/rock_edge_project/02_selected_model/04_tflite_int8/04_yolov8n_LiteRT_INT8.tflite",
+  "source_image": "EDGE_TEST_049_image_244_c6f44af1_640x640.jpg",
+  "ground_truth_count": 2,
+  "predicted_count": 1,
+  "class_counts": {
+    "rock_completely_exposed": 1,
+    "rock_half_buried": 0
+  },
+  "detections": [
+    {
+      "box_xyxy": [
+        293.0121765136719,
+        95.96469116210938,
+        423.5241394042969,
+        195.76797485351562
+      ],
+      "class_id": 0,
+      "confidence": 0.49981608986854553
+    }
+  ]
+}
