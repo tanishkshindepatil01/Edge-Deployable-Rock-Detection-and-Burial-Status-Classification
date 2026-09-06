@@ -1,0 +1,46 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.39+rpt-rpi-2712-aarch64-with-glibc2.41",
+  "machine": "aarch64",
+  "packages": {
+    "ultralytics": {
+      "available": true,
+      "version": "8.4.115"
+    },
+    "onnxruntime": {
+      "available": true,
+      "version": "1.28.0"
+    },
+    "cv2": {
+      "available": true,
+      "version": "5.0.0"
+    },
+    "numpy": {
+      "available": true,
+      "version": "2.5.1"
+    },
+    "pandas": {
+      "available": true,
+      "version": "3.0.5"
+    },
+    "psutil": {
+      "available": true,
+      "version": "7.2.2"
+    }
+  },
+  "litert_backends": {
+    "ai_edge_litert.interpreter": {
+      "available": true,
+      "version": "unknown"
+    },
+    "tflite_runtime.interpreter": {
+      "available": false,
+      "error": "ModuleNotFoundError(\"No module named 'tflite_runtime'\")"
+    },
+    "tensorflow.lite": {
+      "available": false,
+      "error": "ModuleNotFoundError(\"No module named 'tensorflow'\")"
+    }
+  },
+  "vcgencmd_version": "2026/05/26 16:01:25 \nCopyright (c) 2012 Broadcom\nversion 086b83e3 (release) (embedded)"
+}

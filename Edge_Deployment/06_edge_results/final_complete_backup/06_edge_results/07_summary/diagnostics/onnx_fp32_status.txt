@@ -1,0 +1,10 @@
+ONNX FP32 single-image inference: SUCCESS
+ONNX FP32 sustained benchmark: FAILED
+Observed behaviour: Raspberry Pi rebooted immediately after ONNX Runtime CPUExecutionProvider initialisation.
+Repeated occurrence: Yes
+Starting temperature: approximately 41 C
+Power supply: Official Raspberry Pi 27W 5.1V/5A
+Recorded undervoltage: None
+Recorded thermal event: None
+Recorded OOM event: None
+Conclusion: ONNX FP32 sustained benchmark unstable in the current software/hardware configuration.

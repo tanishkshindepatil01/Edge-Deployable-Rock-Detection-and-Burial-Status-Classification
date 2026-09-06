@@ -1,0 +1,986 @@
+Aug 06 14:56:32 rockpi kernel: Booting Linux on physical CPU 0x0000000000 [0x414fd0b1]
+Aug 06 14:56:32 rockpi kernel: Linux version 6.18.39+rpt-rpi-2712 (serge@raspberrypi.com) (aarch64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0, GNU ld (GNU Binutils for Debian) 2.44) #1 SMP PREEMPT Debian 1:6.18.39-1+rpt1 (2026-07-29)
+Aug 06 14:56:32 rockpi kernel: KASLR enabled
+Aug 06 14:56:32 rockpi kernel: random: crng init done
+Aug 06 14:56:32 rockpi kernel: Machine model: Raspberry Pi 5 Model B Rev 1.0
+Aug 06 14:56:32 rockpi kernel: efi: UEFI not found.
+Aug 06 14:56:32 rockpi kernel: Reserved memory: created CMA memory pool at 0x000000003a000000, size 64 MiB
+Aug 06 14:56:32 rockpi kernel: OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+Aug 06 14:56:32 rockpi kernel: OF: reserved mem: 0x000000003a000000..0x000000003dffffff (65536 KiB) map reusable linux,cma
+Aug 06 14:56:32 rockpi kernel: OF: reserved mem: 0x0000000000000000..0x000000000007ffff (512 KiB) nomap non-reusable atf@0
+Aug 06 14:56:32 rockpi kernel: OF: reserved mem: 0x000000003fd235e0..0x000000003fd23617 (0 KiB) nomap non-reusable nvram@0
+Aug 06 14:56:32 rockpi kernel: NUMA: Faking a node at [mem 0x0000000000000000-0x00000001ffffffff]
+Aug 06 14:56:32 rockpi kernel: Faking node 0 at [mem 0x0000000000000000-0x000000003fffffff] (1024MB)
+Aug 06 14:56:32 rockpi kernel: Faking node 1 at [mem 0x0000000040000000-0x000000007fffffff] (1024MB)
+Aug 06 14:56:32 rockpi kernel: Faking node 2 at [mem 0x0000000080000000-0x00000000bfffffff] (1024MB)
+Aug 06 14:56:32 rockpi kernel: Faking node 3 at [mem 0x00000000c0000000-0x00000000ffffffff] (1024MB)
+Aug 06 14:56:32 rockpi kernel: Faking node 4 at [mem 0x0000000100000000-0x000000013fffffff] (1024MB)
+Aug 06 14:56:32 rockpi kernel: Faking node 5 at [mem 0x0000000140000000-0x000000017fffffff] (1024MB)
+Aug 06 14:56:32 rockpi kernel: Faking node 6 at [mem 0x0000000180000000-0x00000001bfffffff] (1024MB)
+Aug 06 14:56:32 rockpi kernel: Faking node 7 at [mem 0x00000001c0000000-0x00000001ffffffff] (1024MB)
+Aug 06 14:56:32 rockpi kernel: NODE_DATA(0) allocated [mem 0x3fbfd180-0x3fbfffff]
+Aug 06 14:56:32 rockpi kernel: NODE_DATA(1) allocated [mem 0x7fffd180-0x7fffffff]
+Aug 06 14:56:32 rockpi kernel: NODE_DATA(2) allocated [mem 0xbfffd180-0xbfffffff]
+Aug 06 14:56:32 rockpi kernel: NODE_DATA(3) allocated [mem 0xffffd180-0xffffffff]
+Aug 06 14:56:32 rockpi kernel: NODE_DATA(4) allocated [mem 0x13fffd180-0x13fffffff]
+Aug 06 14:56:32 rockpi kernel: NODE_DATA(5) allocated [mem 0x17fffd180-0x17fffffff]
+Aug 06 14:56:32 rockpi kernel: NODE_DATA(6) allocated [mem 0x1bfffd180-0x1bfffffff]
+Aug 06 14:56:32 rockpi kernel: NODE_DATA(7) allocated [mem 0x1ffb9c440-0x1ffb9f2bf]
+Aug 06 14:56:32 rockpi kernel: Zone ranges:
+Aug 06 14:56:32 rockpi kernel:   DMA      [mem 0x0000000000000000-0x00000000ffffffff]
+Aug 06 14:56:32 rockpi kernel:   DMA32    empty
+Aug 06 14:56:32 rockpi kernel:   Normal   [mem 0x0000000100000000-0x00000001ffffffff]
+Aug 06 14:56:32 rockpi kernel: Movable zone start for each node
+Aug 06 14:56:32 rockpi kernel: Early memory node ranges
+Aug 06 14:56:32 rockpi kernel:   node   0: [mem 0x0000000000000000-0x000000000007ffff]
+Aug 06 14:56:32 rockpi kernel:   node   0: [mem 0x0000000000080000-0x000000003fbfffff]
+Aug 06 14:56:32 rockpi kernel:   node   1: [mem 0x0000000040000000-0x000000007fffffff]
+Aug 06 14:56:32 rockpi kernel:   node   2: [mem 0x0000000080000000-0x00000000bfffffff]
+Aug 06 14:56:32 rockpi kernel:   node   3: [mem 0x00000000c0000000-0x00000000ffffffff]
+Aug 06 14:56:32 rockpi kernel:   node   4: [mem 0x0000000100000000-0x000000013fffffff]
+Aug 06 14:56:32 rockpi kernel:   node   5: [mem 0x0000000140000000-0x000000017fffffff]
+Aug 06 14:56:32 rockpi kernel:   node   6: [mem 0x0000000180000000-0x00000001bfffffff]
+Aug 06 14:56:32 rockpi kernel:   node   7: [mem 0x00000001c0000000-0x00000001ffffffff]
+Aug 06 14:56:32 rockpi kernel: Initmem setup node 0 [mem 0x0000000000000000-0x000000003fbfffff]
+Aug 06 14:56:32 rockpi kernel: Initmem setup node 1 [mem 0x0000000040000000-0x000000007fffffff]
+Aug 06 14:56:32 rockpi kernel: Initmem setup node 2 [mem 0x0000000080000000-0x00000000bfffffff]
+Aug 06 14:56:32 rockpi kernel: Initmem setup node 3 [mem 0x00000000c0000000-0x00000000ffffffff]
+Aug 06 14:56:32 rockpi kernel: Initmem setup node 4 [mem 0x0000000100000000-0x000000013fffffff]
+Aug 06 14:56:32 rockpi kernel: Initmem setup node 5 [mem 0x0000000140000000-0x000000017fffffff]
+Aug 06 14:56:32 rockpi kernel: Initmem setup node 6 [mem 0x0000000180000000-0x00000001bfffffff]
+Aug 06 14:56:32 rockpi kernel: Initmem setup node 7 [mem 0x00000001c0000000-0x00000001ffffffff]
+Aug 06 14:56:32 rockpi kernel: On node 1, zone DMA: 256 pages in unavailable ranges
+Aug 06 14:56:32 rockpi kernel: psci: probing for conduit method from DT.
+Aug 06 14:56:32 rockpi kernel: psci: PSCIv1.1 detected in firmware.
+Aug 06 14:56:32 rockpi kernel: psci: Using standard PSCI v0.2 function IDs
+Aug 06 14:56:32 rockpi kernel: psci: MIGRATE_INFO_TYPE not supported.
+Aug 06 14:56:32 rockpi kernel: psci: SMC Calling Convention v1.2
+Aug 06 14:56:32 rockpi kernel: percpu: Embedded 9 pages/cpu s95896 r8192 d43368 u147456
+Aug 06 14:56:32 rockpi kernel: pcpu-alloc: s95896 r8192 d43368 u147456 alloc=9*16384
+Aug 06 14:56:32 rockpi kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Aug 06 14:56:32 rockpi kernel: Detected PIPT I-cache on CPU0
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Virtualization Host Extensions
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Spectre-v4
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Spectre-BHB
+Aug 06 14:56:32 rockpi kernel: CPU features: kernel page table isolation forced ON by KASLR
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Kernel page table isolation (KPTI)
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Broken broadcast TLBI completion
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: SSBS not fully self-synchronizing
+Aug 06 14:56:32 rockpi kernel: alternatives: applying boot alternatives
+Aug 06 14:56:32 rockpi kernel: Kernel command line: reboot=w coherent_pool=1M 8250.nr_uarts=1 pci=pcie_bus_safe cgroup_disable=memory numa_policy=interleave nvme.max_host_mem_size_mb=32  numa=fake=8 system_heap.max_order=0 iommu_dma_numa_policy=interleave smsc95xx.macaddr=2C:CF:67:1F:FE:B3 vc_mem.mem_base=0x3fc00000 vc_mem.mem_size=0x40000000  console=ttyAMA10,115200 console=tty1 root=PARTUUID=0fef7908-02 rootfstype=ext4 fsck.repair=yes rootwait ds=nocloud;i=rpi-imager-1786015053603 cfg80211.ieee80211_regdom=GB
+Aug 06 14:56:32 rockpi kernel: cgroup: Disabling memory control group subsystem
+Aug 06 14:56:32 rockpi kernel: mempolicy: NUMA default policy overridden to 'interleave:0-7'
+Aug 06 14:56:32 rockpi kernel: DMA IOMMU NUMA default policy overridden to 'interleave:0-7'
+Aug 06 14:56:32 rockpi kernel: Unknown kernel command line parameters "ds=nocloud;i=rpi-imager-1786015053603", will be passed to user space.
+Aug 06 14:56:32 rockpi kernel: printk: log buffer data + meta data: 131072 + 458752 = 589824 bytes
+Aug 06 14:56:32 rockpi kernel: software IO TLB: area num 4.
+Aug 06 14:56:32 rockpi kernel: software IO TLB: mapped [mem 0x00000000fbffc000-0x00000000ffffc000] (64MB)
+Aug 06 14:56:32 rockpi kernel: Fallback order for Node 0: 0 1 2 3 4 5 6 7 
+Aug 06 14:56:32 rockpi kernel: Fallback order for Node 1: 1 2 3 4 5 6 7 0 
+Aug 06 14:56:32 rockpi kernel: Fallback order for Node 2: 2 3 4 5 6 7 0 1 
+Aug 06 14:56:32 rockpi kernel: Fallback order for Node 3: 3 4 5 6 7 0 1 2 
+Aug 06 14:56:32 rockpi kernel: Fallback order for Node 4: 4 5 6 7 0 1 2 3 
+Aug 06 14:56:32 rockpi kernel: Fallback order for Node 5: 5 6 7 0 1 2 3 4 
+Aug 06 14:56:32 rockpi kernel: Fallback order for Node 6: 6 7 0 1 2 3 4 5 
+Aug 06 14:56:32 rockpi kernel: Fallback order for Node 7: 7 0 1 2 3 4 5 6 
+Aug 06 14:56:32 rockpi kernel: Built 8 zonelists, mobility grouping on.  Total pages: 524032
+Aug 06 14:56:32 rockpi kernel: Policy zone: Normal
+Aug 06 14:56:32 rockpi kernel: mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Aug 06 14:56:32 rockpi kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=8
+Aug 06 14:56:32 rockpi kernel: ftrace: allocating 46727 entries in 46 pages
+Aug 06 14:56:32 rockpi kernel: ftrace: allocated 46 pages with 4 groups
+Aug 06 14:56:32 rockpi kernel: rcu: Preemptible hierarchical RCU implementation.
+Aug 06 14:56:32 rockpi kernel: rcu:         RCU event tracing is enabled.
+Aug 06 14:56:32 rockpi kernel:         Trampoline variant of Tasks RCU enabled.
+Aug 06 14:56:32 rockpi kernel:         Rude variant of Tasks RCU enabled.
+Aug 06 14:56:32 rockpi kernel:         Tracing variant of Tasks RCU enabled.
+Aug 06 14:56:32 rockpi kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+Aug 06 14:56:32 rockpi kernel: RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Aug 06 14:56:32 rockpi kernel: RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Aug 06 14:56:32 rockpi kernel: RCU Tasks Trace: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Aug 06 14:56:32 rockpi kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+Aug 06 14:56:32 rockpi kernel: Root IRQ handler: gic_handle_irq
+Aug 06 14:56:32 rockpi kernel: GIC: Using split EOI/Deactivate mode
+Aug 06 14:56:32 rockpi kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Aug 06 14:56:32 rockpi kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Aug 06 14:56:32 rockpi kernel: arch_timer: cp15 timer running at 54.00MHz (phys).
+Aug 06 14:56:32 rockpi kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xc743ce346, max_idle_ns: 440795203123 ns
+Aug 06 14:56:32 rockpi kernel: sched_clock: 56 bits at 54MHz, resolution 18ns, wraps every 4398046511102ns
+Aug 06 14:56:32 rockpi kernel: Console: colour dummy device 80x25
+Aug 06 14:56:32 rockpi kernel: printk: legacy console [tty1] enabled
+Aug 06 14:56:32 rockpi kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 108.00 BogoMIPS (lpj=216000)
+Aug 06 14:56:32 rockpi kernel: pid_max: default: 32768 minimum: 301
+Aug 06 14:56:32 rockpi kernel: LSM: initializing lsm=capability
+Aug 06 14:56:32 rockpi kernel: Dentry cache hash table entries: 1048576 (order: 9, 8388608 bytes, vmalloc hugepage)
+Aug 06 14:56:32 rockpi kernel: Inode-cache hash table entries: 524288 (order: 8, 4194304 bytes, vmalloc hugepage)
+Aug 06 14:56:32 rockpi kernel: Mount-cache hash table entries: 16384 (order: 3, 131072 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: Mountpoint-cache hash table entries: 16384 (order: 3, 131072 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: rcu: Hierarchical SRCU implementation.
+Aug 06 14:56:32 rockpi kernel: rcu:         Max phase no-delay instances is 1000.
+Aug 06 14:56:32 rockpi kernel: Timer migration: 1 hierarchy levels; 8 children per group; 0 crossnode level
+Aug 06 14:56:32 rockpi kernel: EFI services will not be available.
+Aug 06 14:56:32 rockpi kernel: smp: Bringing up secondary CPUs ...
+Aug 06 14:56:32 rockpi kernel: Detected PIPT I-cache on CPU1
+Aug 06 14:56:32 rockpi kernel: CPU1: Booted secondary processor 0x0000000100 [0x414fd0b1]
+Aug 06 14:56:32 rockpi kernel: Detected PIPT I-cache on CPU2
+Aug 06 14:56:32 rockpi kernel: CPU2: Booted secondary processor 0x0000000200 [0x414fd0b1]
+Aug 06 14:56:32 rockpi kernel: Detected PIPT I-cache on CPU3
+Aug 06 14:56:32 rockpi kernel: CPU3: Booted secondary processor 0x0000000300 [0x414fd0b1]
+Aug 06 14:56:32 rockpi kernel: smp: Brought up 8 nodes, 4 CPUs
+Aug 06 14:56:32 rockpi kernel: SMP: Total of 4 processors activated.
+Aug 06 14:56:32 rockpi kernel: CPU: All CPU(s) started at EL2
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: 32-bit EL0 Support
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Common not Private translations
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: CRC32 instructions
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: LSE atomic instructions
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Privileged Access Never
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: PMUv3
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: RAS Extension Support
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+Aug 06 14:56:32 rockpi kernel: alternatives: applying system-wide alternatives
+Aug 06 14:56:32 rockpi kernel: CPU features: detected: Hardware dirty bit management on CPU0-3
+Aug 06 14:56:32 rockpi kernel: Memory: 8153952K/8384512K available (15040K kernel code, 2466K rwdata, 5216K rodata, 2240K init, 563K bss, 142432K reserved, 65536K cma-reserved)
+Aug 06 14:56:32 rockpi kernel: devtmpfs: initialized
+Aug 06 14:56:32 rockpi kernel: Enabled cp15_barrier support
+Aug 06 14:56:32 rockpi kernel: Enabled setend support
+Aug 06 14:56:32 rockpi kernel: posixtimers hash table entries: 2048 (order: 1, 32768 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: futex hash table entries: 128 (8192 bytes on 8 NUMA nodes, total 64 KiB, linear).
+Aug 06 14:56:32 rockpi kernel: 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+Aug 06 14:56:32 rockpi kernel: 0 pages in range for non-PLT usage
+Aug 06 14:56:32 rockpi kernel: 129452 pages in range for PLT usage
+Aug 06 14:56:32 rockpi kernel: pinctrl core: initialized pinctrl subsystem
+Aug 06 14:56:32 rockpi kernel: DMI not present or invalid.
+Aug 06 14:56:32 rockpi kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Aug 06 14:56:32 rockpi kernel: DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+Aug 06 14:56:32 rockpi kernel: DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Aug 06 14:56:32 rockpi kernel: DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Aug 06 14:56:32 rockpi kernel: audit: initializing netlink subsys (disabled)
+Aug 06 14:56:32 rockpi kernel: audit: type=2000 audit(0.008:1): state=initialized audit_enabled=0 res=1
+Aug 06 14:56:32 rockpi kernel: thermal_sys: Registered thermal governor 'step_wise'
+Aug 06 14:56:32 rockpi kernel: cpuidle: using governor menu
+Aug 06 14:56:32 rockpi kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+Aug 06 14:56:32 rockpi kernel: ASID allocator initialised with 32768 entries
+Aug 06 14:56:32 rockpi kernel: Serial: AMBA PL011 UART driver
+Aug 06 14:56:32 rockpi kernel: /soc@107c000000/interrupt-controller@7fff9000: Fixed dependency cycle(s) with /soc@107c000000/interrupt-controller@7fff9000
+Aug 06 14:56:32 rockpi kernel: bcm2835-mbox 107c013880.mailbox: mailbox enabled
+Aug 06 14:56:32 rockpi kernel: 107d001000.serial: ttyAMA10 at MMIO 0x107d001000 (irq = 16, base_baud = 0) is a PL011 rev3
+Aug 06 14:56:32 rockpi kernel: printk: console [ttyAMA10] enabled
+Aug 06 14:56:32 rockpi kernel: raspberrypi-firmware soc@107c000000:firmware: Attached to firmware from 2026-05-26T15:01:25, variant start_cd
+Aug 06 14:56:32 rockpi kernel: raspberrypi-firmware soc@107c000000:firmware: Firmware hash is 086b83e300000000000000000000000000000000
+Aug 06 14:56:32 rockpi kernel: bcm2835-dma 1000010000.dma: DMA legacy API manager, dmachans=0x1
+Aug 06 14:56:32 rockpi kernel: iommu: Default domain type: Translated
+Aug 06 14:56:32 rockpi kernel: iommu: DMA domain TLB invalidation policy: strict mode
+Aug 06 14:56:32 rockpi kernel: SCSI subsystem initialized
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new interface driver usbfs
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new interface driver hub
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new device driver usb
+Aug 06 14:56:32 rockpi kernel: pps_core: LinuxPPS API ver. 1 registered
+Aug 06 14:56:32 rockpi kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Aug 06 14:56:32 rockpi kernel: PTP clock support registered
+Aug 06 14:56:32 rockpi kernel: vgaarb: loaded
+Aug 06 14:56:32 rockpi kernel: clocksource: Switched to clocksource arch_sys_counter
+Aug 06 14:56:32 rockpi kernel: VFS: Disk quotas dquot_6.6.0
+Aug 06 14:56:32 rockpi kernel: VFS: Dquot-cache hash table entries: 2048 (order 0, 16384 bytes)
+Aug 06 14:56:32 rockpi kernel: NET: Registered PF_INET protocol family
+Aug 06 14:56:32 rockpi kernel: IP idents hash table entries: 131072 (order: 6, 1048576 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: tcp_listen_portaddr_hash hash table entries: 4096 (order: 2, 65536 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: Table-perturb hash table entries: 65536 (order: 4, 262144 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: TCP established hash table entries: 65536 (order: 5, 524288 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: TCP bind hash table entries: 65536 (order: 7, 2097152 bytes, vmalloc hugepage)
+Aug 06 14:56:32 rockpi kernel: TCP: Hash tables configured (established 65536 bind 65536)
+Aug 06 14:56:32 rockpi kernel: MPTCP token hash table entries: 8192 (order: 4, 196608 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: UDP hash table entries: 4096 (order: 4, 262144 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: UDP-Lite hash table entries: 4096 (order: 4, 262144 bytes, vmalloc)
+Aug 06 14:56:32 rockpi kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Aug 06 14:56:32 rockpi kernel: RPC: Registered named UNIX socket transport module.
+Aug 06 14:56:32 rockpi kernel: RPC: Registered udp transport module.
+Aug 06 14:56:32 rockpi kernel: RPC: Registered tcp transport module.
+Aug 06 14:56:32 rockpi kernel: RPC: Registered tcp-with-tls transport module.
+Aug 06 14:56:32 rockpi kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Aug 06 14:56:32 rockpi kernel: PCI: CLS 0 bytes, default 64
+Aug 06 14:56:32 rockpi kernel: Trying to unpack rootfs image as initramfs...
+Aug 06 14:56:32 rockpi kernel: kvm [1]: nv: 568 coarse grained trap handlers
+Aug 06 14:56:32 rockpi kernel: kvm [1]: IPA Size Limit: 40 bits
+Aug 06 14:56:32 rockpi kernel: kvm [1]: GICV region size/alignment is unsafe, using trapping (reduced performance)
+Aug 06 14:56:32 rockpi kernel: kvm [1]: vgic interrupt IRQ9
+Aug 06 14:56:32 rockpi kernel: kvm [1]: VHE mode initialized successfully
+Aug 06 14:56:32 rockpi kernel: Initialise system trusted keyrings
+Aug 06 14:56:32 rockpi kernel: workingset: timestamp_bits=42 max_order=19 bucket_order=0
+Aug 06 14:56:32 rockpi kernel: NFS: Registering the id_resolver key type
+Aug 06 14:56:32 rockpi kernel: Key type id_resolver registered
+Aug 06 14:56:32 rockpi kernel: Key type id_legacy registered
+Aug 06 14:56:32 rockpi kernel: nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+Aug 06 14:56:32 rockpi kernel: nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+Aug 06 14:56:32 rockpi kernel: Key type asymmetric registered
+Aug 06 14:56:32 rockpi kernel: Asymmetric key parser 'x509' registered
+Aug 06 14:56:32 rockpi kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+Aug 06 14:56:32 rockpi kernel: io scheduler mq-deadline registered
+Aug 06 14:56:32 rockpi kernel: io scheduler kyber registered
+Aug 06 14:56:32 rockpi kernel: io scheduler bfq registered
+Aug 06 14:56:32 rockpi kernel: irq_brcmstb_l2: registered L2 intc (/soc@107c000000/interrupt-controller@7d510600, parent irq: 27)
+Aug 06 14:56:32 rockpi kernel: irq_brcmstb_l2: registered L2 intc (/soc@107c000000/interrupt-controller@7c502000, parent irq: 28)
+Aug 06 14:56:32 rockpi kernel: irq_brcmstb_l2: registered L2 intc (/soc@107c000000/interrupt-controller@7d508380, parent irq: 29)
+Aug 06 14:56:32 rockpi kernel: irq_brcmstb_l2: registered L2 intc (/soc@107c000000/interrupt-controller@7d508400, parent irq: 30)
+Aug 06 14:56:32 rockpi kernel: irq_brcmstb_l2: registered L2 intc (/soc@107c000000/intc@7d503000, parent irq: 31)
+Aug 06 14:56:32 rockpi kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Aug 06 14:56:32 rockpi kernel: Freeing initrd memory: 11552K
+Aug 06 14:56:32 rockpi kernel: Serial: 8250/16550 driver, 1 ports, IRQ sharing enabled
+Aug 06 14:56:32 rockpi kernel: 107d50c000.serial: ttyS0 at MMIO 0x107d50c000 (irq = 33, base_baud = 6000000) is a Broadcom BCM7271 UART
+Aug 06 14:56:32 rockpi kernel: serial serial0: tty port ttyS0 registered
+Aug 06 14:56:32 rockpi kernel: iproc-rng200 107d208000.rng: hwrng registered
+Aug 06 14:56:32 rockpi kernel: vc-mem: phys_addr:0x00000000 mem_base=0x3fc00000 mem_size:0x40000000(1024 MiB)
+Aug 06 14:56:32 rockpi kernel: bcm2712-iommu-cache 1000005b00.iommuc: bcm2712_iommu_cache_probe
+Aug 06 14:56:32 rockpi kernel: brd: module loaded
+Aug 06 14:56:32 rockpi kernel: loop: module loaded
+Aug 06 14:56:32 rockpi kernel: bcm2835-power bcm2835-power: Broadcom BCM2835 power domains driver
+Aug 06 14:56:32 rockpi kernel: Loading iSCSI transport class v2.0-870.
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new interface driver lan78xx
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new interface driver smsc95xx
+Aug 06 14:56:32 rockpi kernel: dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Aug 06 14:56:32 rockpi kernel: dwc_otg: FIQ enabled
+Aug 06 14:56:32 rockpi kernel: dwc_otg: NAK holdoff enabled
+Aug 06 14:56:32 rockpi kernel: dwc_otg: FIQ split-transaction FSM enabled
+Aug 06 14:56:32 rockpi kernel: Module dwc_common_port init
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new interface driver uas
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new interface driver usb-storage
+Aug 06 14:56:32 rockpi kernel: mousedev: PS/2 mouse device common for all mice
+Aug 06 14:56:32 rockpi kernel: rpi-rtc soc@107c000000:rpi_rtc: registered as rtc0
+Aug 06 14:56:32 rockpi kernel: rpi-rtc soc@107c000000:rpi_rtc: setting system clock to 2026-08-06T13:56:28 UTC (1786024588)
+Aug 06 14:56:32 rockpi kernel: bcm2835-wdt bcm2835-wdt: Poweroff handler already present!
+Aug 06 14:56:32 rockpi kernel: bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+Aug 06 14:56:32 rockpi kernel: sdhci: Secure Digital Host Controller Interface driver
+Aug 06 14:56:32 rockpi kernel: sdhci: Copyright(c) Pierre Ossman
+Aug 06 14:56:32 rockpi kernel: sdhci-pltfm: SDHCI platform and OF driver helper
+Aug 06 14:56:32 rockpi kernel: SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+Aug 06 14:56:32 rockpi kernel: hid: raw HID events driver (C) Jiri Kosina
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new interface driver usbhid
+Aug 06 14:56:32 rockpi kernel: usbhid: USB HID core driver
+Aug 06 14:56:32 rockpi kernel: hw perfevents: enabled with armv8_cortex_a76 PMU driver, 7 (0,8000003f) counters available
+Aug 06 14:56:32 rockpi kernel: NET: Registered PF_PACKET protocol family
+Aug 06 14:56:32 rockpi kernel: Key type dns_resolver registered
+Aug 06 14:56:32 rockpi kernel: registered taskstats version 1
+Aug 06 14:56:32 rockpi kernel: Loading compiled-in X.509 certificates
+Aug 06 14:56:32 rockpi kernel: Demotion targets for Node 0: null
+Aug 06 14:56:32 rockpi kernel: Demotion targets for Node 1: null
+Aug 06 14:56:32 rockpi kernel: Demotion targets for Node 2: null
+Aug 06 14:56:32 rockpi kernel: Demotion targets for Node 3: null
+Aug 06 14:56:32 rockpi kernel: Demotion targets for Node 4: null
+Aug 06 14:56:32 rockpi kernel: Demotion targets for Node 5: null
+Aug 06 14:56:32 rockpi kernel: Demotion targets for Node 6: null
+Aug 06 14:56:32 rockpi kernel: Demotion targets for Node 7: null
+Aug 06 14:56:32 rockpi kernel: Key type .fscrypt registered
+Aug 06 14:56:32 rockpi kernel: Key type fscrypt-provisioning registered
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie: host bridge /axi/pcie@1000120000 ranges:
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie:      MEM 0x1f00000000..0x1ffffffffb -> 0x0000000000
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie:      MEM 0x1c00000000..0x1effffffff -> 0x0400000000
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie:   IB MEM 0x1f00000000..0x1f003fffff -> 0x0000000000
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie:   IB MEM 0x0000000000..0x0fffffffff -> 0x1000000000
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie:   IB MEM 0x1000130000..0x1000130fff -> 0xfffffff000
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie: PCI host bridge to bus 0002:00
+Aug 06 14:56:32 rockpi kernel: pci_bus 0002:00: root bus resource [bus 00-ff]
+Aug 06 14:56:32 rockpi kernel: pci_bus 0002:00: root bus resource [mem 0x1f00000000-0x1ffffffffb] (bus address [0x00000000-0xfffffffb])
+Aug 06 14:56:32 rockpi kernel: pci_bus 0002:00: root bus resource [mem 0x1c00000000-0x1effffffff pref] (bus address [0x400000000-0x6ffffffff])
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0: [14e4:2712] type 01 class 0x060400 PCIe Root Port
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0: PCI bridge to [bus 00]
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0:   bridge window [mem 0x1f80000000-0x1fbfffffff]
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0: PME# supported from D0 D3hot
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie: clkreq-mode set to default
+Aug 06 14:56:32 rockpi kernel: brcm-pcie 1000120000.pcie: link up, 5.0 GT/s PCIe x4 (!SSC)
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: [1de4:0001] type 00 class 0x020000 PCIe Endpoint
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: BAR 0 [mem 0xffffc000-0xffffffff]
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: BAR 1 [mem 0xffc00000-0xffffffff]
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: BAR 2 [mem 0xffff0000-0xffffffff]
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: supports D1
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: PME# supported from D0 D1 D3hot D3cold
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: ASPM: default states L1
+Aug 06 14:56:32 rockpi kernel: pci_bus 0002:01: busn_res: [bus 01-ff] end is updated to 01
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0: bridge window [mem 0x1f00000000-0x1f004fffff]: assigned
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: BAR 1 [mem 0x1f00000000-0x1f003fffff]: assigned
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: BAR 2 [mem 0x1f00400000-0x1f0040ffff]: assigned
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: BAR 0 [mem 0x1f00410000-0x1f00413fff]: assigned
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0: PCI bridge to [bus 01]
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0:   bridge window [mem 0x1f00000000-0x1f004fffff]
+Aug 06 14:56:32 rockpi kernel: pci_bus 0002:00: resource 4 [mem 0x1f00000000-0x1ffffffffb]
+Aug 06 14:56:32 rockpi kernel: pci_bus 0002:00: resource 5 [mem 0x1c00000000-0x1effffffff pref]
+Aug 06 14:56:32 rockpi kernel: pci_bus 0002:01: resource 1 [mem 0x1f00000000-0x1f004fffff]
+Aug 06 14:56:32 rockpi kernel: pci 0002:00:00.0: Max Payload Size set to  256/ 512 (was  128), Max Read Rq  512
+Aug 06 14:56:32 rockpi kernel: pci 0002:01:00.0: Max Payload Size set to  256/ 256 (was  128), Max Read Rq  512
+Aug 06 14:56:32 rockpi kernel: pcieport 0002:00:00.0: enabling device (0000 -> 0002)
+Aug 06 14:56:32 rockpi kernel: pcieport 0002:00:00.0: PME: Signaling with IRQ 38
+Aug 06 14:56:32 rockpi kernel: pcieport 0002:00:00.0: AER: enabled with IRQ 38
+Aug 06 14:56:32 rockpi kernel: rp1 0002:01:00.0: bar0 len 0x4000, start 0x1f00410000, end 0x1f00413fff, flags, 0x40200
+Aug 06 14:56:32 rockpi kernel: rp1 0002:01:00.0: bar1 len 0x400000, start 0x1f00000000, end 0x1f003fffff, flags, 0x40200
+Aug 06 14:56:32 rockpi kernel: rp1 0002:01:00.0: enabling device (0000 -> 0002)
+Aug 06 14:56:32 rockpi kernel: rp1 0002:01:00.0: chip_id 0x20001927
+Aug 06 14:56:32 rockpi kernel: bcm2712-iommu 1000005100.iommu: IOVA aperture 0xa00000000..0xb00000000 including DMA offset 0x0
+Aug 06 14:56:32 rockpi kernel: bcm2712-iommu 1000005100.iommu: bcm2712_iommu_init: DEBUG_INFO = 0x20804774
+Aug 06 14:56:32 rockpi kernel: platform 1000800000.codec: bcm2712_iommu_of_xlate: MMU 1000005100.iommu
+Aug 06 14:56:32 rockpi kernel: platform 1000800000.codec: bcm2712_iommu_probe_device: MMU 1000005100.iommu
+Aug 06 14:56:32 rockpi kernel: platform 1000800000.codec: bcm2712_iommu_device_group: MMU 1000005100.iommu
+Aug 06 14:56:32 rockpi kernel: platform 1000800000.codec: Adding to iommu group 0
+Aug 06 14:56:32 rockpi kernel: platform 1000880000.pisp_be: bcm2712_iommu_of_xlate: MMU 1000005100.iommu
+Aug 06 14:56:32 rockpi kernel: platform 1000880000.pisp_be: bcm2712_iommu_probe_device: MMU 1000005100.iommu
+Aug 06 14:56:32 rockpi kernel: platform 1000880000.pisp_be: bcm2712_iommu_device_group: MMU 1000005100.iommu
+Aug 06 14:56:32 rockpi kernel: platform 1000880000.pisp_be: Adding to iommu group 0
+Aug 06 14:56:32 rockpi kernel: platform 1000800000.codec: bcm2712_iommu_attach_dev: MMU 1000005100.iommu
+Aug 06 14:56:32 rockpi kernel: platform 1000880000.pisp_be: bcm2712_iommu_attach_dev: MMU 1000005100.iommu
+Aug 06 14:56:32 rockpi kernel: bcm2712-iommu 1000005200.iommu: IOVA aperture 0xa00000000..0xa80000000 including DMA offset 0x0
+Aug 06 14:56:32 rockpi kernel: bcm2712-iommu 1000005200.iommu: bcm2712_iommu_init: DEBUG_INFO = 0x20804774
+Aug 06 14:56:32 rockpi kernel: platform axi:gpu: bcm2712_iommu_of_xlate: MMU 1000005200.iommu
+Aug 06 14:56:32 rockpi kernel: platform axi:gpu: bcm2712_iommu_probe_device: MMU 1000005200.iommu
+Aug 06 14:56:32 rockpi kernel: platform axi:gpu: bcm2712_iommu_device_group: MMU 1000005200.iommu
+Aug 06 14:56:32 rockpi kernel: platform axi:gpu: Adding to iommu group 1
+Aug 06 14:56:32 rockpi kernel: platform 107c580000.hvs: bcm2712_iommu_of_xlate: MMU 1000005200.iommu
+Aug 06 14:56:32 rockpi kernel: platform 107c580000.hvs: bcm2712_iommu_probe_device: MMU 1000005200.iommu
+Aug 06 14:56:32 rockpi kernel: platform 107c580000.hvs: bcm2712_iommu_device_group: MMU 1000005200.iommu
+Aug 06 14:56:32 rockpi kernel: platform 107c580000.hvs: Adding to iommu group 1
+Aug 06 14:56:32 rockpi kernel: platform axi:gpu: bcm2712_iommu_attach_dev: MMU 1000005200.iommu
+Aug 06 14:56:32 rockpi kernel: platform 107c580000.hvs: bcm2712_iommu_attach_dev: MMU 1000005200.iommu
+Aug 06 14:56:32 rockpi kernel: bcm2712-iommu 1000005280.iommu: IOVA aperture 0x1a00000000..0x1a80000000 including DMA offset 0x1000000000
+Aug 06 14:56:32 rockpi kernel: bcm2712-iommu 1000005280.iommu: bcm2712_iommu_init: DEBUG_INFO = 0x20804774
+Aug 06 14:56:32 rockpi kernel: sdhci-brcmstb 1000fff000.mmc: Got CD GPIO
+Aug 06 14:56:32 rockpi kernel: mmc1: CQHCI version 5.10
+Aug 06 14:56:32 rockpi kernel: mmc0: CQHCI version 5.10
+Aug 06 14:56:32 rockpi kernel: macb 1f00100000.ethernet eth0: Cadence GEM rev 0x00070109 at 0x1f00100000 irq 106 (2c:cf:67:1f:fe:b3)
+Aug 06 14:56:32 rockpi kernel: dw_axi_dmac_platform 1f00188000.dma: DesignWare AXI DMA Controller, 8 channels
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.0: xHCI Host Controller
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.0: new USB bus registered, assigned bus number 1
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.0: hcc params 0x0240fe6d hci version 0x110 quirks 0x0000808000000810
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.0: irq 131, io mem 0x1f00200000
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.0: xHCI Host Controller
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.0: new USB bus registered, assigned bus number 2
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.0: Host supports USB 3.0 SuperSpeed
+Aug 06 14:56:32 rockpi kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.18
+Aug 06 14:56:32 rockpi kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Aug 06 14:56:32 rockpi kernel: usb usb1: Product: xHCI Host Controller
+Aug 06 14:56:32 rockpi kernel: usb usb1: Manufacturer: Linux 6.18.39+rpt-rpi-2712 xhci-hcd
+Aug 06 14:56:32 rockpi kernel: usb usb1: SerialNumber: xhci-hcd.0
+Aug 06 14:56:32 rockpi kernel: hub 1-0:1.0: USB hub found
+Aug 06 14:56:32 rockpi kernel: hub 1-0:1.0: 2 ports detected
+Aug 06 14:56:32 rockpi kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.18
+Aug 06 14:56:32 rockpi kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Aug 06 14:56:32 rockpi kernel: usb usb2: Product: xHCI Host Controller
+Aug 06 14:56:32 rockpi kernel: usb usb2: Manufacturer: Linux 6.18.39+rpt-rpi-2712 xhci-hcd
+Aug 06 14:56:32 rockpi kernel: usb usb2: SerialNumber: xhci-hcd.0
+Aug 06 14:56:32 rockpi kernel: hub 2-0:1.0: USB hub found
+Aug 06 14:56:32 rockpi kernel: hub 2-0:1.0: 1 port detected
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.1: xHCI Host Controller
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.1: new USB bus registered, assigned bus number 3
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.1: hcc params 0x0240fe6d hci version 0x110 quirks 0x0000808000000810
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.1: irq 136, io mem 0x1f00300000
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.1: xHCI Host Controller
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.1: new USB bus registered, assigned bus number 4
+Aug 06 14:56:32 rockpi kernel: xhci-hcd xhci-hcd.1: Host supports USB 3.0 SuperSpeed
+Aug 06 14:56:32 rockpi kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.18
+Aug 06 14:56:32 rockpi kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Aug 06 14:56:32 rockpi kernel: usb usb3: Product: xHCI Host Controller
+Aug 06 14:56:32 rockpi kernel: usb usb3: Manufacturer: Linux 6.18.39+rpt-rpi-2712 xhci-hcd
+Aug 06 14:56:32 rockpi kernel: usb usb3: SerialNumber: xhci-hcd.1
+Aug 06 14:56:32 rockpi kernel: hub 3-0:1.0: USB hub found
+Aug 06 14:56:32 rockpi kernel: hub 3-0:1.0: 2 ports detected
+Aug 06 14:56:32 rockpi kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.18
+Aug 06 14:56:32 rockpi kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Aug 06 14:56:32 rockpi kernel: usb usb4: Product: xHCI Host Controller
+Aug 06 14:56:32 rockpi kernel: usb usb4: Manufacturer: Linux 6.18.39+rpt-rpi-2712 xhci-hcd
+Aug 06 14:56:32 rockpi kernel: usb usb4: SerialNumber: xhci-hcd.1
+Aug 06 14:56:32 rockpi kernel: hub 4-0:1.0: USB hub found
+Aug 06 14:56:32 rockpi kernel: hub 4-0:1.0: 1 port detected
+Aug 06 14:56:32 rockpi kernel: of_cfs_init
+Aug 06 14:56:32 rockpi kernel: of_cfs_init: OK
+Aug 06 14:56:32 rockpi kernel: clk: Disabling unused clocks
+Aug 06 14:56:32 rockpi kernel: PM: genpd: Disabling unused power domains
+Aug 06 14:56:32 rockpi kernel: mmc0: SDHCI controller on 1000fff000.mmc [1000fff000.mmc] using ADMA 64-bit
+Aug 06 14:56:32 rockpi kernel: mmc1: SDHCI controller on 1001100000.mmc [1001100000.mmc] using ADMA 64-bit
+Aug 06 14:56:32 rockpi kernel: Freeing unused kernel memory: 2240K
+Aug 06 14:56:32 rockpi kernel: Run /init as init process
+Aug 06 14:56:32 rockpi kernel:   with arguments:
+Aug 06 14:56:32 rockpi kernel:     /init
+Aug 06 14:56:32 rockpi kernel:   with environment:
+Aug 06 14:56:32 rockpi kernel:     HOME=/
+Aug 06 14:56:32 rockpi kernel:     TERM=linux
+Aug 06 14:56:32 rockpi kernel:     ds=nocloud;i=rpi-imager-1786015053603
+Aug 06 14:56:32 rockpi kernel: brcmstb-i2c 107d508200.i2c:  @97500hz registered in interrupt mode
+Aug 06 14:56:32 rockpi kernel: brcmstb-i2c 107d508280.i2c:  @97500hz registered in interrupt mode
+Aug 06 14:56:32 rockpi kernel: mmc0: new UHS-I speed SDR104 SDXC card at address 59b4
+Aug 06 14:56:32 rockpi kernel: mmcblk0: mmc0:59b4 SD128 119 GiB
+Aug 06 14:56:32 rockpi kernel:  mmcblk0: p1 p2
+Aug 06 14:56:32 rockpi kernel: mmcblk0: mmc0:59b4 SD128 119 GiB (quirks 0x00004000)
+Aug 06 14:56:32 rockpi kernel: mmc1: new UHS-I speed DDR50 SDIO card at address 0001
+Aug 06 14:56:32 rockpi kernel: EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+Aug 06 14:56:32 rockpi kernel: EXT4-fs (mmcblk0p2): mounted filesystem 15f4c6be-1102-4331-9904-f78e78afd1fd ro with ordered data mode. Quota mode: none.
+Aug 06 14:56:32 rockpi kernel: NET: Registered PF_INET6 protocol family
+Aug 06 14:56:32 rockpi kernel: Segment Routing with IPv6
+Aug 06 14:56:32 rockpi kernel: In-situ OAM (IOAM) with IPv6
+Aug 06 14:56:32 rockpi systemd[1]: systemd 257.13-1~deb13u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+Aug 06 14:56:32 rockpi systemd[1]: Detected architecture arm64.
+Aug 06 14:56:32 rockpi systemd[1]: Hostname set to <rockpi>.
+Aug 06 14:56:32 rockpi systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+Aug 06 14:56:32 rockpi systemd[1]: Using hardware watchdog 'Broadcom BCM2835 Watchdog timer', version 0, device /dev/watchdog0
+Aug 06 14:56:32 rockpi systemd[1]: Watchdog running with a hardware timeout of 1min.
+Aug 06 14:56:32 rockpi zram_generator::config[228]: zram0: system has too much memory (8062MB), limit is 0MB, ignoring.
+Aug 06 14:56:32 rockpi systemd[1]: Queued start job for default target multi-user.target.
+Aug 06 14:56:32 rockpi systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+Aug 06 14:56:32 rockpi systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+Aug 06 14:56:32 rockpi systemd[1]: Created slice system-rpi\x2dsetup\x2dloop.slice - Slice /system/rpi-setup-loop.
+Aug 06 14:56:32 rockpi systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+Aug 06 14:56:32 rockpi systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+Aug 06 14:56:32 rockpi systemd[1]: Created slice system-systemd\x2dzram\x2dsetup.slice - Slice /system/systemd-zram-setup.
+Aug 06 14:56:32 rockpi systemd[1]: Created slice user.slice - User and Session Slice.
+Aug 06 14:56:32 rockpi systemd[1]: Started systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch.
+Aug 06 14:56:32 rockpi systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+Aug 06 14:56:32 rockpi systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+Aug 06 14:56:32 rockpi systemd[1]: Expecting device dev-disk-by\x2dpartuuid-0fef7908\x2d01.device - /dev/disk/by-partuuid/0fef7908-01...
+Aug 06 14:56:32 rockpi systemd[1]: Expecting device dev-ttyAMA10.device - /dev/ttyAMA10...
+Aug 06 14:56:32 rockpi systemd[1]: Expecting device dev-zram0.device - /dev/zram0...
+Aug 06 14:56:32 rockpi systemd[1]: Reached target paths.target - Path Units.
+Aug 06 14:56:32 rockpi systemd[1]: Reached target remote-fs.target - Remote File Systems.
+Aug 06 14:56:32 rockpi systemd[1]: Reached target slices.target - Slice Units.
+Aug 06 14:56:32 rockpi systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+Aug 06 14:56:32 rockpi systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+Aug 06 14:56:32 rockpi systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+Aug 06 14:56:32 rockpi systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+Aug 06 14:56:32 rockpi systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+Aug 06 14:56:32 rockpi systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+Aug 06 14:56:32 rockpi systemd[1]: dev-hugepages.mount - Huge Pages File System skipped, unmet condition check ConditionPathExists=/sys/kernel/mm/hugepages
+Aug 06 14:56:32 rockpi systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+Aug 06 14:56:32 rockpi systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+Aug 06 14:56:32 rockpi systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+Aug 06 14:56:32 rockpi systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+Aug 06 14:56:32 rockpi systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+Aug 06 14:56:32 rockpi systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+Aug 06 14:56:32 rockpi systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+Aug 06 14:56:32 rockpi systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+Aug 06 14:56:32 rockpi systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+Aug 06 14:56:32 rockpi systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+Aug 06 14:56:32 rockpi systemd[1]: systemd-fsck-root.service - File System Check on Root Device skipped, unmet condition check ConditionPathExists=!/run/initramfs/fsck-root
+Aug 06 14:56:32 rockpi systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-journald.service - Journal Service...
+Aug 06 14:56:32 rockpi kernel: fuse: init (API version 7.45)
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+Aug 06 14:56:32 rockpi systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+Aug 06 14:56:32 rockpi systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+Aug 06 14:56:32 rockpi systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+Aug 06 14:56:32 rockpi systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+Aug 06 14:56:32 rockpi systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+Aug 06 14:56:32 rockpi systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+Aug 06 14:56:32 rockpi systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+Aug 06 14:56:32 rockpi systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+Aug 06 14:56:32 rockpi systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Aug 06 14:56:32 rockpi systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+Aug 06 14:56:32 rockpi systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Aug 06 14:56:32 rockpi systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+Aug 06 14:56:32 rockpi systemd[1]: modprobe@fuse.service: Deactivated successfully.
+Aug 06 14:56:32 rockpi systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+Aug 06 14:56:32 rockpi systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+Aug 06 14:56:32 rockpi systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+Aug 06 14:56:32 rockpi systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+Aug 06 14:56:32 rockpi systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+Aug 06 14:56:32 rockpi kernel: zram: Added device: zram0
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+Aug 06 14:56:32 rockpi systemd[1]: modprobe@drm.service: Deactivated successfully.
+Aug 06 14:56:32 rockpi systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+Aug 06 14:56:32 rockpi kernel: EXT4-fs (mmcblk0p2): re-mounted 15f4c6be-1102-4331-9904-f78e78afd1fd r/w.
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+Aug 06 14:56:32 rockpi systemd[1]: regenerate_ssh_host_keys.service - Regenerate SSH host keys skipped, unmet condition check ConditionFirstBoot=yes
+Aug 06 14:56:32 rockpi systemd[1]: Starting rpi-resize-swap-file.service - rpi-resize-var-swap-service - resize swapfile...
+Aug 06 14:56:32 rockpi systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+Aug 06 14:56:32 rockpi systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-random-seed.service - Load/Save OS Random Seed...
+Aug 06 14:56:32 rockpi systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+Aug 06 14:56:32 rockpi systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-random-seed.service - Load/Save OS Random Seed.
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+Aug 06 14:56:32 rockpi systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-udevd.service - Rule-based Manager for Device Events and Files...
+Aug 06 14:56:32 rockpi systemd-journald[317]: Collecting audit messages is disabled.
+Aug 06 14:56:32 rockpi systemd[1]: rpi-resize-swap-file.service: Deactivated successfully.
+Aug 06 14:56:32 rockpi systemd[1]: Finished rpi-resize-swap-file.service - rpi-resize-var-swap-service - resize swapfile.
+Aug 06 14:56:32 rockpi systemd[1]: Starting rpi-setup-loop@var-swap.service - rpi-setup-loop - set up file on loop device...
+Aug 06 14:56:32 rockpi systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.
+Aug 06 14:56:32 rockpi systemd[1]: Reached target time-set.target - System Time Set.
+Aug 06 14:56:32 rockpi systemd-journald[317]: Journal started
+Aug 06 14:56:32 rockpi systemd-journald[317]: Runtime Journal (/run/log/journal/a94c48c2f32c4985b18de90bd2320e35) is 8M, max 161.2M, 153.2M free.
+Aug 06 14:56:31 rockpi systemd-modules-load[318]: Inserted module 'zram'
+Aug 06 14:56:32 rockpi systemd[1]: Started systemd-journald.service - Journal Service.
+Aug 06 14:56:32 rockpi systemd-udevd[360]: Using default interface naming scheme 'v257'.
+Aug 06 14:56:32 rockpi rpi-resize-swap-file[361]: mkswap: /var/swap: warning: wiping old swap signature.
+Aug 06 14:56:32 rockpi rpi-resize-swap-file[361]: Setting up swapspace version 1, size = 2 GiB (2147467264 bytes)
+Aug 06 14:56:32 rockpi rpi-resize-swap-file[361]: LABEL=origin:rpi-swap, UUID=00000000-0000-0000-0000-000000000000
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-journal-flush.service - Flush Journal to Persistent Storage...
+Aug 06 14:56:32 rockpi kernel: loop0: detected capacity change from 0 to 4194304
+Aug 06 14:56:32 rockpi systemd-journald[317]: Time spent on flushing to /var/log/journal/a94c48c2f32c4985b18de90bd2320e35 is 78.278ms for 526 entries.
+Aug 06 14:56:32 rockpi systemd-journald[317]: System Journal (/var/log/journal/a94c48c2f32c4985b18de90bd2320e35) is 16M, max 4G, 3.9G free.
+Aug 06 14:56:32 rockpi systemd-journald[317]: Received client request to flush runtime journal.
+Aug 06 14:56:32 rockpi kernel: zram: setup backing device /dev/disk/by-backingfile/var-swap
+Aug 06 14:56:32 rockpi kernel: zram0: detected capacity change from 0 to 4194304
+Aug 06 14:56:32 rockpi systemd[1]: Finished rpi-setup-loop@var-swap.service - rpi-setup-loop - set up file on loop device.
+Aug 06 14:56:32 rockpi systemd-udevd[360]: /usr/lib/udev/rules.d/90-alsa-restore.rules:18 GOTO="alsa_restore_std" has no matching label, ignoring.
+Aug 06 14:56:32 rockpi systemd-udevd[360]: /usr/lib/udev/rules.d/90-alsa-restore.rules:18 The line has no effect any more, dropping.
+Aug 06 14:56:32 rockpi systemd-udevd[360]: /usr/lib/udev/rules.d/90-alsa-restore.rules:22 GOTO="alsa_restore_std" has no matching label, ignoring.
+Aug 06 14:56:32 rockpi systemd-udevd[360]: /usr/lib/udev/rules.d/90-alsa-restore.rules:22 The line has no effect any more, dropping.
+Aug 06 14:56:32 rockpi systemd[1]: Started systemd-udevd.service - Rule-based Manager for Device Events and Files.
+Aug 06 14:56:32 rockpi systemd[1]: Found device dev-zram0.device - /dev/zram0.
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-zram-setup@zram0.service - Create swap on /dev/zram0...
+Aug 06 14:56:32 rockpi systemd-makefs[421]: /dev/zram0 successfully formatted as swap (label "zram0", uuid d18cdd9c-cc0a-42d7-977e-6dab15949797)
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 107d508500.gpiomem: window base 0x107d508500 size 0x00000040
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 107d508500.gpiomem: initialised 1 regions as /dev/gpiomem1
+Aug 06 14:56:32 rockpi kernel: rp1-firmware rp1_firmware: RP1 Firmware version 23fca1cd776798b50bd3e640ecb242215778e7f8
+Aug 06 14:56:32 rockpi kernel: input: pwr_button as /devices/platform/pwr_button/input/input0
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 107d517c00.gpiomem: window base 0x107d517c00 size 0x00000040
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 107d517c00.gpiomem: initialised 1 regions as /dev/gpiomem2
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 107d504100.gpiomem: window base 0x107d504100 size 0x00000020
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 107d504100.gpiomem: initialised 1 regions as /dev/gpiomem3
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 107d510700.gpiomem: window base 0x107d510700 size 0x00000020
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 107d510700.gpiomem: initialised 1 regions as /dev/gpiomem4
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 1f000d0000.gpiomem: window base 0x1f000d0000 size 0x00030000
+Aug 06 14:56:32 rockpi kernel: rpi-gpiomem 1f000d0000.gpiomem: initialised 1 regions as /dev/gpiomem0
+Aug 06 14:56:32 rockpi kernel: mc: Linux media interface: v0.10
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-journal-flush.service - Flush Journal to Persistent Storage.
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-zram-setup@zram0.service - Create swap on /dev/zram0.
+Aug 06 14:56:32 rockpi systemd[1]: Activating swap dev-zram0.swap - rpi-swap managed swap device (zram+file)...
+Aug 06 14:56:32 rockpi kernel: rp1-pio 1f00178000.pio: Created instance as pio0 (op count 33, 0 interrupts)
+Aug 06 14:56:32 rockpi kernel: videodev: Linux video capture interface: v2.00
+Aug 06 14:56:32 rockpi systemd[1]: Activated swap dev-zram0.swap - rpi-swap managed swap device (zram+file).
+Aug 06 14:56:32 rockpi kernel: Adding 2097136k swap on /dev/zram0.  Priority:100 extents:1 across:2097136k SS
+Aug 06 14:56:32 rockpi systemd[1]: Reached target swap.target - Swaps.
+Aug 06 14:56:32 rockpi kernel: v3d 1002000000.v3d: [drm] Transparent Hugepage support is recommended for optimal performance on this platform!
+Aug 06 14:56:32 rockpi systemd[1]: Found device dev-disk-by\x2dpartuuid-0fef7908\x2d01.device - /dev/disk/by-partuuid/0fef7908-01.
+Aug 06 14:56:32 rockpi kernel: [drm] Initialized v3d 1.0.0 for 1002000000.v3d on minor 0
+Aug 06 14:56:32 rockpi kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-fsck@dev-disk-by\x2dpartuuid-0fef7908\x2d01.service - File System Check on /dev/disk/by-partuuid/0fef7908-01...
+Aug 06 14:56:32 rockpi kernel: Loaded X.509 cert 'benh@debian.org: 577e021cb980e0e820821ba7b54b4961b8b4fadf'
+Aug 06 14:56:32 rockpi kernel: Loaded X.509 cert 'romain.perier@gmail.com: 3abbc6ec146e09d1b6016ab9d6cf71dd233f0328'
+Aug 06 14:56:32 rockpi kernel: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Aug 06 14:56:32 rockpi kernel: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+Aug 06 14:56:32 rockpi systemd[1]: Found device dev-ttyAMA10.device - /dev/ttyAMA10.
+Aug 06 14:56:32 rockpi kernel: rpi-hevc-dec 1000800000.codec: Device registered as /dev/video19
+Aug 06 14:56:32 rockpi kernel: Bluetooth: Core ver 2.22
+Aug 06 14:56:32 rockpi kernel: NET: Registered PF_BLUETOOTH protocol family
+Aug 06 14:56:32 rockpi kernel: Bluetooth: HCI device and connection manager initialized
+Aug 06 14:56:32 rockpi kernel: Bluetooth: HCI socket layer initialized
+Aug 06 14:56:32 rockpi kernel: Bluetooth: L2CAP socket layer initialized
+Aug 06 14:56:32 rockpi kernel: Bluetooth: SCO socket layer initialized
+Aug 06 14:56:32 rockpi kernel: Bluetooth: HCI UART driver ver 2.3
+Aug 06 14:56:32 rockpi kernel: Bluetooth: HCI UART protocol H4 registered
+Aug 06 14:56:32 rockpi kernel: Bluetooth: HCI UART protocol Three-wire (H5) registered
+Aug 06 14:56:32 rockpi kernel: Bluetooth: HCI UART protocol Broadcom registered
+Aug 06 14:56:32 rockpi kernel: hci_uart_bcm serial0-0: supply vbat not found, using dummy regulator
+Aug 06 14:56:32 rockpi kernel: hci_uart_bcm serial0-0: supply vddio not found, using dummy regulator
+Aug 06 14:56:32 rockpi kernel: brcmfmac: F1 signature read @0x18000000=0x15264345
+Aug 06 14:56:32 rockpi systemd[1]: Listening on systemd-rfkill.socket - Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Aug 06 14:56:32 rockpi kernel: brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6
+Aug 06 14:56:32 rockpi kernel: usbcore: registered new interface driver brcmfmac
+Aug 06 14:56:32 rockpi systemd-fsck[540]: fsck.fat 4.2 (2021-01-31)
+Aug 06 14:56:32 rockpi systemd-fsck[540]: /dev/mmcblk0p1: 522 files, 136901/1032408 clusters
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-fsck@dev-disk-by\x2dpartuuid-0fef7908\x2d01.service - File System Check on /dev/disk/by-partuuid/0fef7908-01.
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+Aug 06 14:56:32 rockpi systemd[1]: Mounting boot-firmware.mount - /boot/firmware...
+Aug 06 14:56:32 rockpi systemd[1]: dev-hugepages.mount - Huge Pages File System skipped, unmet condition check ConditionPathExists=/sys/kernel/mm/hugepages
+Aug 06 14:56:32 rockpi systemd[1]: Mounting tmp.mount - Temporary Directory /tmp...
+Aug 06 14:56:32 rockpi systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+Aug 06 14:56:32 rockpi systemd[1]: regenerate_ssh_host_keys.service - Regenerate SSH host keys skipped, unmet condition check ConditionFirstBoot=yes
+Aug 06 14:56:32 rockpi systemd[1]: systemd-fsck-root.service - File System Check on Root Device skipped, unmet condition check ConditionPathExists=!/run/initramfs/fsck-root
+Aug 06 14:56:32 rockpi systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+Aug 06 14:56:32 rockpi systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+Aug 06 14:56:32 rockpi systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+Aug 06 14:56:32 rockpi systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+Aug 06 14:56:32 rockpi systemd[1]: Mounted tmp.mount - Temporary Directory /tmp.
+Aug 06 14:56:32 rockpi systemd[1]: Mounted boot-firmware.mount - /boot/firmware.
+Aug 06 14:56:32 rockpi systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Aug 06 14:56:32 rockpi systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+Aug 06 14:56:32 rockpi systemd[1]: Reached target local-fs.target - Local File Systems.
+Aug 06 14:56:32 rockpi systemd[1]: Listening on systemd-sysext.socket - System Extension Image Management.
+Aug 06 14:56:32 rockpi systemd-timesyncd[338]: Network configuration changed, trying to establish connection.
+Aug 06 14:56:32 rockpi systemd[1]: apparmor.service - Load AppArmor profiles skipped, unmet condition check ConditionSecurity=apparmor
+Aug 06 14:56:32 rockpi systemd[1]: Starting cloud-init-main.service - Cloud-init: Single Process...
+Aug 06 14:56:32 rockpi systemd[1]: Starting console-setup.service - Set console font and keymap...
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: bound 107c580000.hvs (ops vc4_hvs_ops [vc4])
+Aug 06 14:56:32 rockpi kernel: Registered IR keymap rc-cec
+Aug 06 14:56:32 rockpi kernel: rc rc0: vc4-hdmi-0 as /devices/platform/soc@107c000000/107c701400.hdmi/rc/rc0
+Aug 06 14:56:32 rockpi kernel: input: vc4-hdmi-0 as /devices/platform/soc@107c000000/107c701400.hdmi/rc/rc0/input1
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+Aug 06 14:56:32 rockpi systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+Aug 06 14:56:32 rockpi kernel: input: vc4-hdmi-0 HDMI Jack as /devices/platform/soc@107c000000/107c701400.hdmi/sound/card0/input2
+Aug 06 14:56:32 rockpi systemd[1]: Starting systemd-tmpfiles-setup.service - Create System Files and Directories...
+Aug 06 14:56:32 rockpi kernel: brcmfmac: brcmf_c_process_txcap_blob: no txcap_blob available (err=-2)
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: bound 107c701400.hdmi (ops vc4_hdmi_ops [vc4])
+Aug 06 14:56:32 rockpi kernel: brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4345/6 wl0: Aug 29 2023 01:47:08 version 7.45.265 (28bca26 CY) FWID 01-b677b91b
+Aug 06 14:56:32 rockpi systemd[1]: Finished console-setup.service - Set console font and keymap.
+Aug 06 14:56:32 rockpi kernel: Registered IR keymap rc-cec
+Aug 06 14:56:32 rockpi kernel: rc rc1: vc4-hdmi-1 as /devices/platform/soc@107c000000/107c706400.hdmi/rc/rc1
+Aug 06 14:56:32 rockpi kernel: input: vc4-hdmi-1 as /devices/platform/soc@107c000000/107c706400.hdmi/rc/rc1/input3
+Aug 06 14:56:32 rockpi systemd-tmpfiles[587]: /usr/lib/tmpfiles.d/legacy.conf:14: Duplicate line for path "/run/lock", ignoring.
+Aug 06 14:56:32 rockpi systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 586 (systemd-binfmt)
+Aug 06 14:56:32 rockpi systemd[1]: Mounting proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System...
+Aug 06 14:56:32 rockpi kernel: input: vc4-hdmi-1 HDMI Jack as /devices/platform/soc@107c000000/107c706400.hdmi/sound/card1/input4
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: bound 107c706400.hdmi (ops vc4_hdmi_ops [vc4])
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: bound 107c500000.mop (ops vc4_txp_ops [vc4])
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: bound 107c501000.moplet (ops vc4_txp_ops [vc4])
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: bound 107c410000.pixelvalve (ops vc4_crtc_ops [vc4])
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: bound 107c411000.pixelvalve (ops vc4_crtc_ops [vc4])
+Aug 06 14:56:32 rockpi kernel: [drm] Initialized vc4 0.0.0 for axi:gpu on minor 1
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: [drm] Cannot find any crtc or sizes
+Aug 06 14:56:32 rockpi systemd[1]: Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: [drm] Cannot find any crtc or sizes
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+Aug 06 14:56:32 rockpi kernel: vc4-drm axi:gpu: [drm] Cannot find any crtc or sizes
+Aug 06 14:56:32 rockpi systemd-timesyncd[338]: Network configuration changed, trying to establish connection.
+Aug 06 14:56:32 rockpi systemd-timesyncd[338]: Network configuration changed, trying to establish connection.
+Aug 06 14:56:32 rockpi systemd-timesyncd[338]: Network configuration changed, trying to establish connection.
+Aug 06 14:56:32 rockpi systemd[1]: Finished systemd-tmpfiles-setup.service - Create System Files and Directories.
+Aug 06 14:56:32 rockpi kernel: Bluetooth: hci0: BCM: chip id 107
+Aug 06 14:56:32 rockpi kernel: Bluetooth: hci0: BCM: features 0x2f
+Aug 06 14:56:32 rockpi kernel: Bluetooth: hci0: BCM4345C0
+Aug 06 14:56:32 rockpi kernel: Bluetooth: hci0: BCM4345C0 (003.001.025) build 0000
+Aug 06 14:56:32 rockpi systemd[1]: apparmor.service - Load AppArmor profiles skipped, unmet condition check ConditionSecurity=apparmor
+Aug 06 14:56:32 rockpi systemd[1]: ldconfig.service - Rebuild Dynamic Linker Cache skipped, no trigger condition checks were met.
+Aug 06 14:56:32 rockpi systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+Aug 06 14:56:32 rockpi systemd[1]: regenerate_ssh_host_keys.service - Regenerate SSH host keys skipped, unmet condition check ConditionFirstBoot=yes
+Aug 06 14:56:32 rockpi systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+Aug 06 14:56:32 rockpi systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+Aug 06 14:56:32 rockpi systemd[1]: systemd-journal-catalog-update.service - Rebuild Journal Catalog skipped, unmet condition check ConditionNeedsUpdate=/var
+Aug 06 14:56:32 rockpi systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+Aug 06 14:56:32 rockpi systemd[1]: systemd-firstboot.service - First Boot Wizard skipped, unmet condition check ConditionFirstBoot=yes
+Aug 06 14:56:32 rockpi systemd[1]: first-boot-complete.target - First Boot Complete skipped, unmet condition check ConditionFirstBoot=yes
+Aug 06 14:56:32 rockpi systemd[1]: systemd-machine-id-commit.service - Save Transient machine-id to Disk skipped, unmet condition check ConditionPathIsMountPoint=/etc/machine-id
+Aug 06 14:56:32 rockpi systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:32 rockpi systemd[1]: systemd-update-done.service - Update is Completed skipped, no trigger condition checks were met.
+Aug 06 14:56:32 rockpi kernel: Bluetooth: hci0: BCM4345C0 'brcm/BCM4345C0.raspberrypi,5-model-b.hcd' Patch
+Aug 06 14:56:33 rockpi systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Aug 06 14:56:33 rockpi systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+Aug 06 14:56:33 rockpi systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+Aug 06 14:56:33 rockpi systemd[1]: Started cloud-init-main.service - Cloud-init: Single Process.
+Aug 06 14:56:33 rockpi systemd[1]: Starting cloud-init-local.service - Cloud-init: Local Stage (pre-network)...
+Aug 06 14:56:33 rockpi kernel: Bluetooth: hci0: BCM: features 0x2f
+Aug 06 14:56:33 rockpi kernel: Bluetooth: hci0: BCM43455 37.4MHz Raspberry Pi 3+-0190
+Aug 06 14:56:33 rockpi kernel: Bluetooth: hci0: BCM4345C0 (003.001.025) build 0382
+Aug 06 14:56:33 rockpi kernel: Bluetooth: hci0: BCM: Using default device address (43:45:c0:00:1f:ac)
+Aug 06 14:56:33 rockpi cloud-init[624]: Cloud-init v. 25.2 running 'init-local' at Thu, 06 Aug 2026 13:56:33 +0000. Up 5.59 seconds.
+Aug 06 14:56:33 rockpi sh[620]: Completed socket interaction for boot stage local
+Aug 06 14:56:33 rockpi systemd[1]: Finished cloud-init-local.service - Cloud-init: Local Stage (pre-network).
+Aug 06 14:56:33 rockpi systemd[1]: Reached target network-pre.target - Preparation for Network.
+Aug 06 14:56:33 rockpi systemd[1]: Starting cloud-init-network.service - Cloud-init: Network Stage...
+Aug 06 14:56:33 rockpi cloud-init[624]: Cloud-init v. 25.2 running 'init' at Thu, 06 Aug 2026 13:56:33 +0000. Up 5.74 seconds.
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: +++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: | Device |   Up  |  Address  |    Mask   | Scope |     Hw-Address    |
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: |  eth0  | False |     .     |     .     |   .   | 2c:cf:67:1f:fe:b3 |
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: |   lo   |  True | 127.0.0.1 | 255.0.0.0 |  host |         .         |
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: |   lo   |  True |  ::1/128  |     .     |  host |         .         |
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: | wlan0  | False |     .     |     .     |   .   | 2c:cf:67:1f:fe:b4 |
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: +-------+-------------+---------+-----------+-------+
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: +-------+-------------+---------+-----------+-------+
+Aug 06 14:56:33 rockpi cloud-init[624]: ci-info: +-------+-------------+---------+-----------+-------+
+Aug 06 14:56:33 rockpi sh[629]: Completed socket interaction for boot stage network
+Aug 06 14:56:33 rockpi systemd[1]: dev-hugepages.mount - Huge Pages File System skipped, unmet condition check ConditionPathExists=/sys/kernel/mm/hugepages
+Aug 06 14:56:33 rockpi systemd[1]: Finished cloud-init-network.service - Cloud-init: Network Stage.
+Aug 06 14:56:33 rockpi systemd[1]: Reached target cloud-config.target - Cloud-config availability.
+Aug 06 14:56:33 rockpi systemd[1]: Reached target sysinit.target - System Initialization.
+Aug 06 14:56:33 rockpi systemd[1]: Started apt-daily.timer - Daily apt download activities.
+Aug 06 14:56:33 rockpi systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
+Aug 06 14:56:33 rockpi systemd[1]: Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+Aug 06 14:56:33 rockpi systemd[1]: Started e2scrub_all.timer - Periodic ext4 Online Metadata Check for All Filesystems.
+Aug 06 14:56:33 rockpi systemd[1]: Started fstrim.timer - Discard unused filesystem blocks once a week.
+Aug 06 14:56:33 rockpi systemd[1]: Started logrotate.timer - Daily rotation of log files.
+Aug 06 14:56:33 rockpi systemd[1]: Started man-db.timer - Daily man-db regeneration.
+Aug 06 14:56:33 rockpi systemd[1]: Started rpi-zram-writeback.timer - zram writeback timer.
+Aug 06 14:56:33 rockpi systemd[1]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of Temporary Directories.
+Aug 06 14:56:33 rockpi systemd[1]: Reached target timers.target - Timer Units.
+Aug 06 14:56:33 rockpi systemd[1]: Listening on avahi-daemon.socket - Avahi mDNS/DNS-SD Stack Activation Socket.
+Aug 06 14:56:33 rockpi systemd[1]: Listening on cloud-init-hotplugd.socket - cloud-init hotplug hook socket.
+Aug 06 14:56:33 rockpi systemd[1]: Listening on dbus.socket - D-Bus System Message Bus Socket.
+Aug 06 14:56:33 rockpi systemd[1]: Listening on sshd-unix-local.socket - OpenSSH Server Socket (systemd-ssh-generator, AF_UNIX Local).
+Aug 06 14:56:33 rockpi systemd[1]: Listening on systemd-hostnamed.socket - Hostname Service Socket.
+Aug 06 14:56:33 rockpi systemd[1]: Reached target sockets.target - Socket Units.
+Aug 06 14:56:33 rockpi systemd[1]: systemd-pcrphase-sysinit.service - TPM PCR Barrier (Initialization) skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:33 rockpi systemd[1]: Reached target basic.target - Basic System.
+Aug 06 14:56:33 rockpi systemd[1]: System is tainted: unmerged-bin
+Aug 06 14:56:33 rockpi systemd[1]: alsa-state.service - Manage Sound Card State (restore and store) skipped, unmet condition check ConditionPathExists=/etc/alsa/state-daemon.conf
+Aug 06 14:56:33 rockpi systemd[1]: Starting alsa-restore.service - Save/Restore Sound Card State...
+Aug 06 14:56:33 rockpi systemd[1]: Starting avahi-daemon.service - Avahi mDNS/DNS-SD Stack...
+Aug 06 14:56:33 rockpi systemd[1]: Starting bluetooth.service - Bluetooth service...
+Aug 06 14:56:33 rockpi systemd[1]: Started cron.service - Regular background program processing daemon.
+Aug 06 14:56:33 rockpi (uetoothd)[636]: bluetooth.service: ConfigurationDirectory 'bluetooth' already exists but the mode is different. (File system: 755 ConfigurationDirectoryMode: 555)
+Aug 06 14:56:33 rockpi systemd[1]: Starting dbus.service - D-Bus System Message Bus...
+Aug 06 14:56:33 rockpi alsactl[634]: alsa-lib main.c:1554:(snd_use_case_mgr_open) error: failed to import hw:0 use case configuration -2
+Aug 06 14:56:33 rockpi alsactl[634]: alsa-lib main.c:1554:(snd_use_case_mgr_open) error: failed to import hw:1 use case configuration -2
+Aug 06 14:56:33 rockpi systemd[1]: Starting e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots...
+Aug 06 14:56:33 rockpi systemd[1]: getty-static.service - getty on tty2-tty6 if dbus and logind are not available skipped, unmet condition check ConditionPathExists=!/usr/bin/dbus-daemon
+Aug 06 14:56:33 rockpi systemd[1]: Starting rpi-eeprom-update.service - Check for Raspberry Pi EEPROM updates...
+Aug 06 14:56:33 rockpi systemd[1]: sshd-keygen.service - Generate sshd host keys on first boot skipped, unmet condition check ConditionFirstBoot=yes
+Aug 06 14:56:33 rockpi cron[637]: (CRON) INFO (pidfile fd = 3)
+Aug 06 14:56:33 rockpi systemd[1]: Starting sshswitch.service - Turn on SSH if /boot/ssh or /boot/firmware/ssh is present...
+Aug 06 14:56:33 rockpi cron[637]: (CRON) INFO (Running @reboot jobs)
+Aug 06 14:56:33 rockpi systemd[1]: Starting systemd-logind.service - User Login Management...
+Aug 06 14:56:33 rockpi systemd[1]: systemd-pcrphase.service - TPM PCR Barrier (User) skipped, unmet condition check ConditionSecurity=measured-uki
+Aug 06 14:56:33 rockpi systemd[1]: Finished alsa-restore.service - Save/Restore Sound Card State.
+Aug 06 14:56:33 rockpi systemd[1]: Reached target sound.target - Sound Card.
+Aug 06 14:56:33 rockpi avahi-daemon[635]: Found user 'avahi' (UID 101) and group 'avahi' (GID 104).
+Aug 06 14:56:33 rockpi avahi-daemon[635]: Successfully dropped root privileges.
+Aug 06 14:56:33 rockpi avahi-daemon[635]: avahi-daemon 0.8 starting up.
+Aug 06 14:56:33 rockpi systemd-logind[643]: New seat seat0.
+Aug 06 14:56:33 rockpi systemd-logind[643]: Watching system buttons on /dev/input/event0 (pwr_button)
+Aug 06 14:56:33 rockpi systemd-logind[643]: Watching system buttons on /dev/input/event1 (vc4-hdmi-0)
+Aug 06 14:56:33 rockpi systemd-logind[643]: Watching system buttons on /dev/input/event3 (vc4-hdmi-1)
+Aug 06 14:56:33 rockpi systemd[1]: Started systemd-logind.service - User Login Management.
+Aug 06 14:56:33 rockpi bluetoothd[636]: Bluetooth daemon 5.82
+Aug 06 14:56:33 rockpi systemd[1]: sshswitch.service: Deactivated successfully.
+Aug 06 14:56:33 rockpi systemd[1]: Finished sshswitch.service - Turn on SSH if /boot/ssh or /boot/firmware/ssh is present.
+Aug 06 14:56:34 rockpi systemd[1]: Started dbus.service - D-Bus System Message Bus.
+Aug 06 14:56:34 rockpi systemd[1]: Starting NetworkManager.service - Network Manager...
+Aug 06 14:56:34 rockpi systemd[1]: Starting wpa_supplicant.service - WPA supplicant...
+Aug 06 14:56:34 rockpi avahi-daemon[635]: Successfully called chroot().
+Aug 06 14:56:34 rockpi avahi-daemon[635]: Successfully dropped remaining capabilities.
+Aug 06 14:56:34 rockpi dbus-daemon[639]: [system] Successfully activated service 'org.freedesktop.systemd1'
+Aug 06 14:56:34 rockpi systemd[1]: Started bluetooth.service - Bluetooth service.
+Aug 06 14:56:34 rockpi systemd[1]: Started avahi-daemon.service - Avahi mDNS/DNS-SD Stack.
+Aug 06 14:56:34 rockpi avahi-daemon[635]: No service file found in /etc/avahi/services.
+Aug 06 14:56:34 rockpi systemd[1]: Reached target bluetooth.target - Bluetooth Support.
+Aug 06 14:56:34 rockpi bluetoothd[636]: Starting SDP server
+Aug 06 14:56:34 rockpi avahi-daemon[635]: Joining mDNS multicast group on interface lo.IPv6 with address ::1.
+Aug 06 14:56:34 rockpi avahi-daemon[635]: New relevant interface lo.IPv6 for mDNS.
+Aug 06 14:56:34 rockpi avahi-daemon[635]: Joining mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+Aug 06 14:56:34 rockpi avahi-daemon[635]: New relevant interface lo.IPv4 for mDNS.
+Aug 06 14:56:34 rockpi avahi-daemon[635]: Network interface enumeration completed.
+Aug 06 14:56:34 rockpi avahi-daemon[635]: Registering new address record for ::1 on lo.*.
+Aug 06 14:56:34 rockpi avahi-daemon[635]: Registering new address record for 127.0.0.1 on lo.IPv4.
+Aug 06 14:56:34 rockpi kernel: Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Aug 06 14:56:34 rockpi kernel: Bluetooth: BNEP filters: protocol multicast
+Aug 06 14:56:34 rockpi kernel: Bluetooth: BNEP socket layer initialized
+Aug 06 14:56:34 rockpi dbus-daemon[639]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.2' (uid=0 pid=636 comm="/usr/libexec/bluetooth/bluetoothd")
+Aug 06 14:56:34 rockpi bluetoothd[636]: Bluetooth management interface 1.23 initialized
+Aug 06 14:56:34 rockpi bluetoothd[636]: Battery Provider Manager created
+Aug 06 14:56:34 rockpi systemd[1]: Starting systemd-hostnamed.service - Hostname Service...
+Aug 06 14:56:34 rockpi kernel: Bluetooth: MGMT ver 1.23
+Aug 06 14:56:34 rockpi kernel: NET: Registered PF_ALG protocol family
+Aug 06 14:56:34 rockpi kernel: Bluetooth: RFCOMM TTY layer initialized
+Aug 06 14:56:34 rockpi kernel: Bluetooth: RFCOMM socket layer initialized
+Aug 06 14:56:34 rockpi kernel: Bluetooth: RFCOMM ver 1.11
+Aug 06 14:56:34 rockpi systemd[1]: Started systemd-hostnamed.service - Hostname Service.
+Aug 06 14:56:34 rockpi dbus-daemon[639]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Aug 06 14:56:34 rockpi systemd[1]: Started wpa_supplicant.service - WPA supplicant.
+Aug 06 14:56:34 rockpi wpa_supplicant[699]: Successfully initialized wpa_supplicant
+Aug 06 14:56:34 rockpi rpi-eeprom-update[641]: BOOTLOADER: up to date
+Aug 06 14:56:34 rockpi rpi-eeprom-update[641]:    CURRENT: Tue 26 May 15:01:25 UTC 2026 (1779807685)
+Aug 06 14:56:34 rockpi rpi-eeprom-update[641]:     LATEST: Tue 26 May 15:01:25 UTC 2026 (1779807685)
+Aug 06 14:56:34 rockpi rpi-eeprom-update[641]:    RELEASE: default (/usr/lib/firmware/raspberrypi/bootloader-2712/default)
+Aug 06 14:56:34 rockpi rpi-eeprom-update[641]:             Use raspi-config to change the release.
+Aug 06 14:56:34 rockpi systemd[1]: Finished rpi-eeprom-update.service - Check for Raspberry Pi EEPROM updates.
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.2924] NetworkManager (version 1.52.1) is starting... (boot:3ee04c09-3e15-4a16-bea8-fb868104ebb5)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.2925] Read config: /etc/NetworkManager/NetworkManager.conf, /usr/lib/NetworkManager/conf.d/{no-mac-addr-change.conf,rpi-no-scan-rand-mac-address.conf}, /run/NetworkManager/conf.d/{10-globally-managed-devices.conf,netplan.conf}
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3065] manager[0x5555845a6040]: monitoring kernel firmware directory '/lib/firmware'.
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3065] monitoring ifupdown state file '/run/network/ifstate'.
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3092] hostname: hostname: using hostnamed
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3092] hostname: static hostname changed from (none) to "rockpi"
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3094] dns-mgr: init: dns=default,systemd-resolved rc-manager=symlink (auto)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3114] rfkill1: found Wi-Fi radio killswitch (at /sys/devices/platform/axi/1001100000.mmc/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/ieee80211/phy0/rfkill1) (driver brcmfmac)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3116] manager[0x5555845a6040]: rfkill: Wi-Fi hardware radio set enabled
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3116] manager[0x5555845a6040]: rfkill: WWAN hardware radio set enabled
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3360] Loaded device plugin: NMBluezManager (/usr/lib/aarch64-linux-gnu/NetworkManager/1.52.1/libnm-device-plugin-bluetooth.so)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3374] Loaded device plugin: NMWwanFactory (/usr/lib/aarch64-linux-gnu/NetworkManager/1.52.1/libnm-device-plugin-wwan.so)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3417] Loaded device plugin: NMTeamFactory (/usr/lib/aarch64-linux-gnu/NetworkManager/1.52.1/libnm-device-plugin-team.so)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3460] Loaded device plugin: NMWifiFactory (/usr/lib/aarch64-linux-gnu/NetworkManager/1.52.1/libnm-device-plugin-wifi.so)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3475] Loaded device plugin: NMAtmManager (/usr/lib/aarch64-linux-gnu/NetworkManager/1.52.1/libnm-device-plugin-adsl.so)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3477] manager: rfkill: Wi-Fi enabled by radio killswitch; enabled by state file
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3478] manager: rfkill: WWAN enabled by radio killswitch; enabled by state file
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3478] manager: Networking is enabled by state file
+Aug 06 14:56:34 rockpi dbus-daemon[639]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.7' (uid=0 pid=698 comm="/usr/sbin/NetworkManager --no-daemon")
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3501] settings: Loaded settings plugin: ifupdown ("/usr/lib/aarch64-linux-gnu/NetworkManager/1.52.1/libnm-settings-plugin-ifupdown.so")
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3501] settings: Loaded settings plugin: keyfile (internal)
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3501] ifupdown: management mode: unmanaged
+Aug 06 14:56:34 rockpi NetworkManager[698]: <info>  [1786024594.3504] ifupdown: interfaces file /etc/network/interfaces doesn't exist
+Aug 06 14:56:34 rockpi systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+Aug 06 14:56:34 rockpi dbus-daemon[639]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Aug 06 14:56:34 rockpi systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+Aug 06 14:56:34 rockpi systemd[1]: e2scrub_reap.service: Deactivated successfully.
+Aug 06 14:56:34 rockpi systemd[1]: Finished e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots.
+Aug 06 14:56:34 rockpi generate[734]: Permissions for /lib/netplan/00-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+Aug 06 14:56:34 rockpi systemd[1]: Reload requested from client PID 737 ('systemctl') (unit NetworkManager.service)...
+Aug 06 14:56:34 rockpi systemd[1]: Reloading...
+Aug 06 14:56:34 rockpi systemd[1]: Reloading finished in 257 ms.
+Aug 06 14:56:34 rockpi generate[827]: Permissions for /lib/netplan/00-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+Aug 06 14:56:35 rockpi systemd[1]: Reload requested from client PID 830 ('systemctl') (unit NetworkManager.service)...
+Aug 06 14:56:35 rockpi systemd[1]: Reloading...
+Aug 06 14:56:35 rockpi avahi-daemon[635]: Server startup complete. Host name is rockpi.local. Local service cookie is 603462601.
+Aug 06 14:56:35 rockpi systemd[1]: Reloading finished in 254 ms.
+Aug 06 14:56:35 rockpi generate[920]: Permissions for /lib/netplan/00-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+Aug 06 14:56:35 rockpi systemd[1]: Reload requested from client PID 923 ('systemctl') (unit NetworkManager.service)...
+Aug 06 14:56:35 rockpi systemd[1]: Reloading...
+Aug 06 14:56:35 rockpi systemd[1]: Reloading finished in 259 ms.
+Aug 06 14:56:35 rockpi generate[1013]: Permissions for /lib/netplan/00-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+Aug 06 14:56:35 rockpi systemd[1]: Reload requested from client PID 1016 ('systemctl') (unit NetworkManager.service)...
+Aug 06 14:56:35 rockpi systemd[1]: Reloading...
+Aug 06 14:56:36 rockpi systemd[1]: Reloading finished in 240 ms.
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2163] dhcp: init: Using DHCP client 'internal'
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2165] manager: (lo): new Loopback device (/org/freedesktop/NetworkManager/Devices/1)
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2173] device (lo): state change: unmanaged -> unavailable (reason 'connection-assumed', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2176] device (lo): state change: unavailable -> disconnected (reason 'connection-assumed', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2190] device (lo): Activation: starting connection 'lo' (dbb24f78-f992-4894-81e2-39c4e0072df2)
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2196] manager: (eth0): new Ethernet device (/org/freedesktop/NetworkManager/Devices/2)
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2198] device (eth0): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+Aug 06 14:56:36 rockpi kernel: macb 1f00100000.ethernet eth0: PHY [1f00100000.ethernet-ffffffff:01] driver [Broadcom BCM54213PE] (irq=POLL)
+Aug 06 14:56:36 rockpi kernel: macb 1f00100000.ethernet eth0: configuring for phy/rgmii-id link mode
+Aug 06 14:56:36 rockpi kernel: macb 1f00100000.ethernet: gem-ptp-timer ptp clock registered.
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2348] device (wlan0): driver supports Access Point (AP) mode
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2353] manager: (wlan0): new 802.11 Wi-Fi device (/org/freedesktop/NetworkManager/Devices/3)
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2355] device (wlan0): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+Aug 06 14:56:36 rockpi kernel: brcmfmac: brcmf_cfg80211_set_power_mgmt: power save enabled
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2409] failed to open /run/network/ifstate
+Aug 06 14:56:36 rockpi systemd[1]: Started NetworkManager.service - Network Manager.
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2413] bus-manager: acquired D-Bus service "org.freedesktop.NetworkManager"
+Aug 06 14:56:36 rockpi systemd[1]: Reached target network.target - Network.
+Aug 06 14:56:36 rockpi systemd[1]: Starting NetworkManager-wait-online.service - Network Manager Wait Online...
+Aug 06 14:56:36 rockpi systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Aug 06 14:56:36 rockpi systemd[1]: Starting systemd-user-sessions.service - Permit User Sessions...
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2540] device (lo): state change: disconnected -> prepare (reason 'none', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2542] device (lo): state change: prepare -> config (reason 'none', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2543] device (lo): state change: config -> ip-config (reason 'none', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2547] modem-manager: oFono is not available
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2548] device (lo): state change: ip-config -> ip-check (reason 'none', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2566] device (lo): state change: ip-check -> secondaries (reason 'none', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2567] device (lo): state change: secondaries -> activated (reason 'none', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.2570] device (lo): Activation: successful, device activated.
+Aug 06 14:56:36 rockpi systemd[1]: Finished systemd-user-sessions.service - Permit User Sessions.
+Aug 06 14:56:36 rockpi systemd[1]: Started getty@tty1.service - Getty on tty1.
+Aug 06 14:56:36 rockpi systemd[1]: Started serial-getty@ttyAMA10.service - Serial Getty on ttyAMA10.
+Aug 06 14:56:36 rockpi systemd[1]: Reached target getty.target - Login Prompts.
+Aug 06 14:56:36 rockpi wpa_supplicant[699]: nl80211: kernel reports: Registration to specific type not supported
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.3239] device (wlan0): supplicant interface state: internal-starting -> disconnected
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.3239] Wi-Fi P2P device controlled by interface wlan0 created
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.3241] manager: (p2p-dev-wlan0): new 802.11 Wi-Fi P2P device (/org/freedesktop/NetworkManager/Devices/4)
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.3243] device (p2p-dev-wlan0): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.3246] device (wlan0): state change: unavailable -> disconnected (reason 'supplicant-available', managed-type: 'full')
+Aug 06 14:56:36 rockpi NetworkManager[698]: <info>  [1786024596.3250] device (p2p-dev-wlan0): state change: unavailable -> disconnected (reason 'none', managed-type: 'full')
+Aug 06 14:56:36 rockpi sshd[1117]: Server listening on 0.0.0.0 port 22.
+Aug 06 14:56:36 rockpi sshd[1117]: Server listening on :: port 22.
+Aug 06 14:56:36 rockpi systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Aug 06 14:56:36 rockpi systemd[1]: Reached target multi-user.target - Multi-User System.
+Aug 06 14:56:37 rockpi systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9039] policy: auto-activating connection 'netplan-wlan0-tanishk10' (847a0bdf-e691-35d3-90c5-afebbfb95903)
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9043] device (wlan0): Activation: starting connection 'netplan-wlan0-tanishk10' (847a0bdf-e691-35d3-90c5-afebbfb95903)
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9043] device (wlan0): state change: disconnected -> prepare (reason 'none', managed-type: 'full')
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9045] manager: NetworkManager state is now CONNECTING
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9046] device (wlan0): state change: prepare -> config (reason 'none', managed-type: 'full')
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9048] device (wlan0): Activation: (wifi) access point 'netplan-wlan0-tanishk10' has security, but secrets are required.
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9048] device (wlan0): state change: config -> need-auth (reason 'none', managed-type: 'full')
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9055] device (wlan0): state change: need-auth -> prepare (reason 'none', managed-type: 'full')
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9057] device (wlan0): state change: prepare -> config (reason 'none', managed-type: 'full')
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9058] device (wlan0): Activation: (wifi) connection 'netplan-wlan0-tanishk10' has security, and secrets exist.  No new secrets needed.
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9058] Config: added 'ssid' value 'tanishk10'
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9058] Config: added 'scan_ssid' value '1'
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9058] Config: added 'bgscan' value 'simple:30:-65:300'
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9059] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256 FT-PSK'
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9059] Config: added 'psk' value '<hidden>'
+Aug 06 14:56:38 rockpi wpa_supplicant[699]: wlan0: Trying to associate with 4a:6b:bb:c5:16:aa (SSID='tanishk10' freq=2437 MHz)
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9131] device (wlan0): supplicant interface state: disconnected -> associating
+Aug 06 14:56:38 rockpi NetworkManager[698]: <info>  [1786024598.9131] device (p2p-dev-wlan0): supplicant management interface state: disconnected -> associating
+Aug 06 14:56:39 rockpi wpa_supplicant[699]: wlan0: Associated with 4a:6b:bb:c5:16:aa
+Aug 06 14:56:39 rockpi wpa_supplicant[699]: wlan0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+Aug 06 14:56:39 rockpi wpa_supplicant[699]: wlan0: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=GB
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.2106] device (wlan0): supplicant interface state: associating -> associated
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.2106] device (p2p-dev-wlan0): supplicant management interface state: associating -> associated
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.6715] device (wlan0): supplicant interface state: associated -> 4way_handshake
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.6715] device (p2p-dev-wlan0): supplicant management interface state: associated -> 4way_handshake
+Aug 06 14:56:39 rockpi wpa_supplicant[699]: wlan0: WPA: Key negotiation completed with 4a:6b:bb:c5:16:aa [PTK=CCMP GTK=CCMP]
+Aug 06 14:56:39 rockpi wpa_supplicant[699]: wlan0: CTRL-EVENT-CONNECTED - Connection to 4a:6b:bb:c5:16:aa completed [id=0 id_str=]
+Aug 06 14:56:39 rockpi wpa_supplicant[699]: bgscan simple: Failed to enable signal strength monitoring
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.6825] device (wlan0): supplicant interface state: 4way_handshake -> completed
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.6826] device (wlan0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "tanishk10"
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.6826] device (p2p-dev-wlan0): supplicant management interface state: 4way_handshake -> completed
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.6827] device (wlan0): state change: config -> ip-config (reason 'none', managed-type: 'full')
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.6829] dhcp4 (wlan0): activation: beginning transaction (timeout in 45 seconds)
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.7387] dhcp4 (wlan0): state changed new lease, address=172.20.10.3, acd pending
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.9026] dhcp4 (wlan0): state changed new lease, address=172.20.10.3
+Aug 06 14:56:39 rockpi avahi-daemon[635]: Joining mDNS multicast group on interface wlan0.IPv4 with address 172.20.10.3.
+Aug 06 14:56:39 rockpi avahi-daemon[635]: New relevant interface wlan0.IPv4 for mDNS.
+Aug 06 14:56:39 rockpi avahi-daemon[635]: Registering new address record for 172.20.10.3 on wlan0.IPv4.
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.9072] policy: set 'netplan-wlan0-tanishk10' (wlan0) as default for IPv4 routing and DNS
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.9258] device (wlan0): state change: ip-config -> ip-check (reason 'none', managed-type: 'full')
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.9269] device (wlan0): state change: ip-check -> secondaries (reason 'none', managed-type: 'full')
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.9270] device (wlan0): state change: secondaries -> activated (reason 'none', managed-type: 'full')
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.9272] manager: NetworkManager state is now CONNECTED_SITE
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.9287] device (wlan0): Activation: successful, device activated.
+Aug 06 14:56:39 rockpi NetworkManager[698]: <info>  [1786024599.9290] manager: NetworkManager state is now CONNECTED_GLOBAL
+Aug 06 14:56:41 rockpi avahi-daemon[635]: Joining mDNS multicast group on interface wlan0.IPv6 with address fe80::2ecf:67ff:fe1f:feb4.
+Aug 06 14:56:41 rockpi avahi-daemon[635]: New relevant interface wlan0.IPv6 for mDNS.
+Aug 06 14:56:41 rockpi avahi-daemon[635]: Registering new address record for fe80::2ecf:67ff:fe1f:feb4 on wlan0.*.
+Aug 06 14:56:42 rockpi NetworkManager[698]: <info>  [1786024602.2311] manager: startup complete
+Aug 06 14:56:42 rockpi systemd[1]: Finished NetworkManager-wait-online.service - Network Manager Wait Online.
+Aug 06 14:56:42 rockpi systemd[1]: Reached target network-online.target - Network is Online.
+Aug 06 14:56:42 rockpi systemd[1]: Starting cloud-config.service - Cloud-init: Config Stage...
+Aug 06 14:56:42 rockpi cloud-init[624]: Cloud-init v. 25.2 running 'modules:config' at Thu, 06 Aug 2026 13:56:42 +0000. Up 14.18 seconds.
+Aug 06 14:56:42 rockpi sh[1128]: Completed socket interaction for boot stage config
+Aug 06 14:56:42 rockpi systemd[1]: Finished cloud-config.service - Cloud-init: Config Stage.
+Aug 06 14:56:42 rockpi systemd[1]: Starting cloud-final.service - Cloud-init: Final Stage...
+Aug 06 14:56:42 rockpi cloud-init[624]: Cloud-init v. 25.2 running 'modules:final' at Thu, 06 Aug 2026 13:56:42 +0000. Up 14.24 seconds.
+Aug 06 14:56:42 rockpi cloud-init[624]: 2026-08-06 13:56:42,362 - modules.py[WARNING]: Could not find module named cc_netplan_nm_patch (searched ['cc_netplan_nm_patch', 'cloudinit.config.cc_netplan_nm_patch'])
+Aug 06 14:56:42 rockpi cloud-init[624]: Cloud-init v. 25.2 finished at Thu, 06 Aug 2026 13:56:42 +0000. Datasource DataSourceNoCloud [seed=cmdline,ds_config_seedfrom,file:///boot/firmware][dsmode=local].  Up 14.28 seconds
+Aug 06 14:56:42 rockpi sh[1133]: Completed socket interaction for boot stage final
+Aug 06 14:56:42 rockpi systemd[1]: Finished cloud-final.service - Cloud-init: Final Stage.
+Aug 06 14:56:42 rockpi systemd[1]: Reached target cloud-init.target - Cloud-init target.
+Aug 06 14:56:42 rockpi systemd[1]: Startup finished in 2.775s (kernel) + 11.511s (userspace) = 14.287s.
+Aug 06 14:56:42 rockpi systemd[1]: cloud-init-main.service: Deactivated successfully.
+Aug 06 14:56:44 rockpi systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Aug 06 14:56:54 rockpi sshd-session[1137]: Accepted password for tanishk from fe80::14dd:7379:8a0b:3cd1%wlan0 port 61669 ssh2
+Aug 06 14:56:54 rockpi sshd-session[1137]: pam_unix(sshd:session): session opened for user tanishk(uid=1000) by tanishk(uid=0)
+Aug 06 14:56:54 rockpi systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+Aug 06 14:56:54 rockpi systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Aug 06 14:56:54 rockpi systemd-logind[643]: New session 1 of user tanishk.
+Aug 06 14:56:54 rockpi systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+Aug 06 14:56:54 rockpi systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+Aug 06 14:56:54 rockpi (systemd)[1143]: pam_unix(systemd-user:session): session opened for user tanishk(uid=1000) by tanishk(uid=0)
+Aug 06 14:56:54 rockpi systemd-logind[643]: New session 2 of user tanishk.
+Aug 06 14:56:55 rockpi systemd[1143]: Queued start job for default target default.target.
+Aug 06 14:56:55 rockpi systemd[1143]: Created slice app.slice - User Application Slice.
+Aug 06 14:56:55 rockpi systemd[1143]: Reached target paths.target - Paths.
+Aug 06 14:56:55 rockpi systemd[1143]: Reached target timers.target - Timers.
+Aug 06 14:56:55 rockpi systemd[1143]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Aug 06 14:56:55 rockpi systemd[1143]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Aug 06 14:56:55 rockpi systemd[1143]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Aug 06 14:56:55 rockpi systemd[1143]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Aug 06 14:56:55 rockpi systemd[1143]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Aug 06 14:56:55 rockpi systemd[1143]: Starting gpg-agent.socket - GnuPG cryptographic agent and passphrase cache...
+Aug 06 14:56:55 rockpi systemd[1143]: Listening on keyboxd.socket - GnuPG public key management service.
+Aug 06 14:56:55 rockpi systemd[1143]: Starting ssh-agent.socket - OpenSSH Agent socket...
+Aug 06 14:56:55 rockpi systemd[1143]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Aug 06 14:56:55 rockpi systemd[1143]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Aug 06 14:56:55 rockpi systemd[1143]: Listening on ssh-agent.socket - OpenSSH Agent socket.
+Aug 06 14:56:55 rockpi systemd[1143]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Aug 06 14:56:55 rockpi systemd[1143]: Reached target sockets.target - Sockets.
+Aug 06 14:56:55 rockpi systemd[1143]: Reached target basic.target - Basic System.
+Aug 06 14:56:55 rockpi systemd[1]: Started user@1000.service - User Manager for UID 1000.
+Aug 06 14:56:55 rockpi systemd[1143]: Started mpris-proxy.service - Bluetooth mpris proxy.
+Aug 06 14:56:55 rockpi systemd[1143]: Reached target default.target - Main User Target.
+Aug 06 14:56:55 rockpi systemd[1143]: Startup finished in 189ms.
+Aug 06 14:56:55 rockpi systemd[1]: Started session-1.scope - Session 1 of User tanishk.
+Aug 06 14:56:55 rockpi systemd[1143]: Created slice session.slice - User Core Session Slice.
+Aug 06 14:56:55 rockpi systemd[1143]: Starting dbus.service - D-Bus User Message Bus...
+Aug 06 14:56:55 rockpi systemd[1143]: Started dbus.service - D-Bus User Message Bus.
+Aug 06 14:57:02 rockpi systemd-timesyncd[338]: Contacted time server 185.103.119.60:123 (2.debian.pool.ntp.org).
+Aug 06 14:57:02 rockpi systemd-timesyncd[338]: Initial clock synchronization to Thu 2026-08-06 14:57:02.739105 BST.
+Aug 06 14:57:03 rockpi systemd[1]: systemd-hostnamed.service: Deactivated successfully.

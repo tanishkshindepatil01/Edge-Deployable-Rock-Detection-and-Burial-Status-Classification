@@ -1,0 +1,8 @@
+path: /home/tanishk/rock_edge_project/03_edge_test_dataset/02_preprocessed_640x640_90
+train: images
+val: images
+test: images
+nc: 2
+names:
+  0: rock_completely_exposed
+  1: rock_half_buried

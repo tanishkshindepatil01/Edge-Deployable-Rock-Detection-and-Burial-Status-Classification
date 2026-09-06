@@ -1,0 +1,13 @@
+Aug 06 14:56:32 rockpi systemd-udevd[360]: /usr/lib/udev/rules.d/90-alsa-restore.rules:18 GOTO="alsa_restore_std" has no matching label, ignoring.
+Aug 06 14:56:32 rockpi systemd-udevd[360]: /usr/lib/udev/rules.d/90-alsa-restore.rules:18 The line has no effect any more, dropping.
+Aug 06 14:56:32 rockpi systemd-udevd[360]: /usr/lib/udev/rules.d/90-alsa-restore.rules:22 GOTO="alsa_restore_std" has no matching label, ignoring.
+Aug 06 14:56:32 rockpi systemd-udevd[360]: /usr/lib/udev/rules.d/90-alsa-restore.rules:22 The line has no effect any more, dropping.
+Aug 06 14:56:32 rockpi kernel: hci_uart_bcm serial0-0: supply vbat not found, using dummy regulator
+Aug 06 14:56:32 rockpi kernel: hci_uart_bcm serial0-0: supply vddio not found, using dummy regulator
+Aug 06 14:56:33 rockpi (uetoothd)[636]: bluetooth.service: ConfigurationDirectory 'bluetooth' already exists but the mode is different. (File system: 755 ConfigurationDirectoryMode: 555)
+Aug 06 14:56:34 rockpi generate[734]: Permissions for /lib/netplan/00-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+Aug 06 14:56:34 rockpi generate[827]: Permissions for /lib/netplan/00-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+Aug 06 14:56:35 rockpi generate[920]: Permissions for /lib/netplan/00-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+Aug 06 14:56:35 rockpi generate[1013]: Permissions for /lib/netplan/00-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+Aug 06 14:56:36 rockpi wpa_supplicant[699]: nl80211: kernel reports: Registration to specific type not supported
+Aug 06 14:56:39 rockpi wpa_supplicant[699]: bgscan simple: Failed to enable signal strength monitoring
