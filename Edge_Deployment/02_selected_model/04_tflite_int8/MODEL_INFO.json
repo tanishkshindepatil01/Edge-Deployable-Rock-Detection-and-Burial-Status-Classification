@@ -1,0 +1,16 @@
+{
+  "format_key": "tflite_int8",
+  "display_name": "LiteRT/TFLite INT8",
+  "selected_detector": "YOLOv8n",
+  "input_resolution": [
+    640,
+    640
+  ],
+  "batch_size": 1,
+  "local_model_path": "/content/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED/02_selected_model/04_tflite_int8/04_yolov8n_LiteRT_INT8.tflite",
+  "relative_model_path": "02_selected_model/04_tflite_int8/04_yolov8n_LiteRT_INT8.tflite",
+  "final_google_drive_model_path": "/content/drive/MyDrive/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED/02_selected_model/04_tflite_int8/04_yolov8n_LiteRT_INT8.tflite",
+  "model_size_bytes": 3329171,
+  "model_size_mb": 3.1749448776245117,
+  "purpose": "Raspberry Pi edge-format comparison using the same selected detector"
+}
