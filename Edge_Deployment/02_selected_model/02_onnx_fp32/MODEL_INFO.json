@@ -1,0 +1,16 @@
+{
+  "format_key": "onnx_fp32",
+  "display_name": "ONNX FP32",
+  "selected_detector": "YOLOv8n",
+  "input_resolution": [
+    640,
+    640
+  ],
+  "batch_size": 1,
+  "local_model_path": "/content/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED/02_selected_model/02_onnx_fp32/02_yolov8n_ONNX_FP32.onnx",
+  "relative_model_path": "02_selected_model/02_onnx_fp32/02_yolov8n_ONNX_FP32.onnx",
+  "final_google_drive_model_path": "/content/drive/MyDrive/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED/02_selected_model/02_onnx_fp32/02_yolov8n_ONNX_FP32.onnx",
+  "model_size_bytes": 12266116,
+  "model_size_mb": 11.697879791259766,
+  "purpose": "Raspberry Pi edge-format comparison using the same selected detector"
+}
