@@ -1,0 +1,23 @@
+{
+  "format": "ONNX FP32",
+  "model_path": "/home/tanishk/rock_edge_project/02_selected_model/02_onnx_fp32/02_yolov8n_ONNX_FP32.onnx",
+  "source_image": "EDGE_TEST_003_image_008_dccce67e_640x640.jpg",
+  "ground_truth_count": 1,
+  "predicted_count": 1,
+  "class_counts": {
+    "rock_completely_exposed": 1,
+    "rock_half_buried": 0
+  },
+  "detections": [
+    {
+      "box_xyxy": [
+        246.34596252441406,
+        160.45095825195312,
+        481.582763671875,
+        465.9552917480469
+      ],
+      "class_id": 0,
+      "confidence": 0.9414917826652527
+    }
+  ]
+}
