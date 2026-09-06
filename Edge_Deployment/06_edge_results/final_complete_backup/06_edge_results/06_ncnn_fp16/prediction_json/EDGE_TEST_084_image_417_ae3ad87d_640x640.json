@@ -1,0 +1,33 @@
+{
+  "format": "NCNN FP16",
+  "model_path": "/home/tanishk/rock_edge_project/02_selected_model/06_ncnn_fp16/06_yolov8n_FP16_ncnn_model",
+  "source_image": "EDGE_TEST_084_image_417_ae3ad87d_640x640.jpg",
+  "ground_truth_count": 1,
+  "predicted_count": 2,
+  "class_counts": {
+    "rock_completely_exposed": 1,
+    "rock_half_buried": 1
+  },
+  "detections": [
+    {
+      "box_xyxy": [
+        315.0,
+        232.125,
+        445.5,
+        341.875
+      ],
+      "class_id": 1,
+      "confidence": 0.60107421875
+    },
+    {
+      "box_xyxy": [
+        316.0,
+        232.0,
+        447.0,
+        342.0
+      ],
+      "class_id": 0,
+      "confidence": 0.305908203125
+    }
+  ]
+}
