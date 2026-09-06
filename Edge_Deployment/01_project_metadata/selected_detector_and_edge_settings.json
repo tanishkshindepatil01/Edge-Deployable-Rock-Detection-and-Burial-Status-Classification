@@ -1,0 +1,29 @@
+{
+  "project": "Rock Burial Status Detection and Counting",
+  "created_utc": "2026-08-05T19:19:23.399310+00:00",
+  "selected_detector": "YOLOv8n",
+  "source_checkpoint": "/content/rock_burial_status_project_high_accuracy/runs/YOLOv8n_base/weights/best.pt",
+  "reference_checkpoint": "/content/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED/02_selected_model/01_pytorch_fp32/01_yolov8n_PyTorch_FP32.pt",
+  "classes": {
+    "0": "rock_completely_exposed",
+    "1": "rock_half_buried"
+  },
+  "edge_input_resolution": [
+    640,
+    640
+  ],
+  "batch_size": 1,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.7,
+  "expected_test_images": 90,
+  "smoke_test_images": 10,
+  "int8_calibration_images": 200,
+  "warmup_runs": 10,
+  "timed_passes": 3,
+  "stability_minutes": 30,
+  "local_staging_root": "/content/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED",
+  "final_google_drive_root": "/content/drive/MyDrive/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED",
+  "project_release": "FINAL_EDGE_ESSENTIALS_V2",
+  "ultralytics_version": "8.4.115",
+  "python_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]"
+}

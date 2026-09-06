@@ -1,0 +1,25 @@
+{
+  "project_release": "FINAL_EDGE_ESSENTIALS_V2",
+  "created_utc": "2026-08-05T19:23:03.040302+00:00",
+  "deployment_ready": true,
+  "successful_exports": [
+    "ncnn_fp16",
+    "ncnn_fp32",
+    "onnx_fp32",
+    "pytorch_fp32",
+    "tflite_fp32",
+    "tflite_int8"
+  ],
+  "successful_colab_validations": [
+    "ncnn_fp16",
+    "ncnn_fp32",
+    "onnx_fp32",
+    "pytorch_fp32",
+    "tflite_fp32",
+    "tflite_int8"
+  ],
+  "edge_test_images": 90,
+  "edge_test_labels": 90,
+  "curated_visualization_files": 32,
+  "google_drive_policy": "essential_only"
+}
