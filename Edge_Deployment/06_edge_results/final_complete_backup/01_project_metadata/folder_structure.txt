@@ -1,0 +1,21 @@
+Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED/  (Google Drive essential package)
+├── 01_project_metadata/
+├── 02_selected_model/
+│   ├── 01_pytorch_fp32/
+│   ├── 02_onnx_fp32/
+│   ├── 03_tflite_fp32/
+│   ├── 04_tflite_int8/
+│   ├── 05_ncnn_fp32/
+│   └── 06_ncnn_fp16/
+├── 03_edge_test_dataset/
+│   ├── 02_preprocessed_640x640_90/
+│   └── 03_smoke_test_10/
+├── 05_raspberry_pi_scripts/
+├── 06_edge_results/
+├── 07_manifests_checksums/
+└── visualization/
+
+Local Colab-only working folders (not synchronized):
+00_notebook, 04_int8_calibration_200, 08_reports, 09_archives,
+10_training_backup, 11_source_dataset_reference, training runs,
+augmented datasets, CLIP crops and export workspaces.

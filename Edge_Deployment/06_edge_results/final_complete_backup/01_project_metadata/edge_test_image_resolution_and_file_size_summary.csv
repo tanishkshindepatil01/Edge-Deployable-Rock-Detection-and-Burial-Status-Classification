@@ -1,0 +1,2 @@
+test_images,smoke_test_images,edge_resolution,jpeg_quality,minimum_edge_image_kb,mean_edge_image_kb,median_edge_image_kb,maximum_edge_image_kb,total_edge_dataset_mb
+90,10,640x640,95,110.5009765625,257.13438585069446,268.92138671875,321.537109375,22.59970188140869

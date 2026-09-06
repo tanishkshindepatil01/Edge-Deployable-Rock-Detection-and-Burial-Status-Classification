@@ -1,0 +1,11 @@
+{
+  "stage_1": "Select one detector using validation metrics",
+  "stage_2": "Export PyTorch FP32, ONNX FP32, TFLite FP32, TFLite INT8, NCNN FP32 and NCNN FP16",
+  "stage_3": "Use 200 original training images for INT8 calibration",
+  "stage_4": "Prepare 90 untouched test images as exact 640x640 letterboxed JPEG inputs",
+  "stage_5": "Connect MacBook and Raspberry Pi using SSH; transfer by SCP",
+  "stage_6": "Run 10-image smoke test",
+  "stage_7": "Run 10 warm-ups and 3 timed passes over 90 images for every format",
+  "stage_8": "Compare accuracy, count error, size, latency, FPS, CPU, RAM, temperature and throttling",
+  "stage_9": "Run a 30-minute stability test on the winner"
+}

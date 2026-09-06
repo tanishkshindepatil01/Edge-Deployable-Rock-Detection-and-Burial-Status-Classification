@@ -1,0 +1,31 @@
+{
+  "project_release": "FINAL_EDGE_ESSENTIALS_V2",
+  "created_utc": "2026-08-05T19:23:03.039763+00:00",
+  "drive_mode": "essential_edge_deployment_and_curated_visualizations_only",
+  "included_top_level_folders": [
+    "01_project_metadata",
+    "02_selected_model",
+    "03_edge_test_dataset",
+    "05_raspberry_pi_scripts",
+    "06_edge_results",
+    "07_manifests_checksums",
+    "visualization"
+  ],
+  "included_file_count": 274,
+  "estimated_included_mb": 133.34303092956543,
+  "estimated_local_nonessential_excluded_mb": 1789.707480430603,
+  "excluded": [
+    "00_notebook",
+    "03_edge_test_dataset/01_original_untouched_90",
+    "04_int8_calibration_200",
+    "08_reports except two compact CSV summaries",
+    "09_archives",
+    "10_training_backup",
+    "11_source_dataset_reference",
+    "training runs and augmented datasets",
+    "CLIP crops and caches",
+    "edge export workspace",
+    "source dataset download",
+    "full and Pi ZIP duplicates"
+  ]
+}
