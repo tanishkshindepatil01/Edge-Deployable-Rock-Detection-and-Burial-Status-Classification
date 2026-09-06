@@ -1,0 +1,7 @@
+﻿format,mean_latency_ms,p95_latency_ms,median_fps,mean_cpu_pct,peak_ram_mb,precision,recall,f1,mAP50,mAP50_95,count_mae,start_temp_c,max_temp_c,end_temp_c,throttling,benchmark_status,stability_status,speedup_vs_pytorch_x,map50_retained_vs_pytorch_pct,continuous_duration_min,continuous_inferences,continuous_final_latency_ms,continuous_final_fps,continuous_ram_mb,continuous_peak_temp_c,continuous_throttling,continuous_reboot,recommendation,final_winner
+PyTorch FP32,397.48,399.83,2.52,44.47,839.47,0.716,0.55,0.622,0.548,0.275,0.6,50.15,61.7,61.15,0x0,Passed,Not selected for long test,1.0,100.0,,,,,,,,,Accuracy reference,No
+ONNX FP32,,,,,,,,,,,,41.1,,,,Failed: repeated hard reboot,Not attempted,,,,,,,,,,Yes - benchmark reboot,Not recommended currently,No
+TFLite FP32,143.7,144.92,6.95,69.95,868.27,0.669,0.542,0.599,0.535,0.27,0.6,49.05,66.1,63.35,0x0,Passed,Not selected for long test,2.76,97.6,,,,,,,,,Stable but inefficient,No
+TFLite INT8,44.13,44.86,22.62,62.83,824.22,0.661,0.539,0.594,0.503,0.234,0.633,47.4,55.1,52.9,0x0,Passed,2-minute continuous test passed,8.99,91.8,2.0,2533,43.78,22.84,821.98,76.0,0x0,No,Final Raspberry Pi demonstrator,Yes
+NCNN FP32,75.09,76.34,13.26,83.32,835.25,0.667,0.542,0.598,0.535,0.271,0.6,47.4,56.75,57.3,0x0,Passed,Continuous test caused hard reboot,5.27,97.7,,,,,,,,Yes,Strong benchmark; failed continuous test,No
+NCNN FP16,72.31,72.86,13.82,87.08,835.45,0.672,0.542,0.6,0.537,0.27,0.611,47.95,59.5,57.85,0x0,Passed,Not tested continuously,5.49,98.0,,,,,,,,,Best optimized accuracy-speed benchmark,No

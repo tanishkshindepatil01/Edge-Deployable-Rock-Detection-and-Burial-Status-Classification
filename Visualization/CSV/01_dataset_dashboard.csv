@@ -1,0 +1,4 @@
+﻿split,target_split_pct,images,actual_split_pct,rock_completely_exposed_objects,rock_half_buried_objects,total_objects,completely_exposed_object_pct,half_buried_object_pct,original_train_images,augmented_images_generated,total_yolo_train_images,training_image_multiplier,total_original_images_all_splits,total_original_objects_all_splits,classes,image_width,image_height
+train,70,313,69.86607142857143,259,250,509,50.884086444007856,49.115913555992144,313,1878,2191,7.0,448,706,2,640,640
+val,10,45,10.044642857142858,34,28,62,54.83870967741935,45.16129032258064,,,,,448,706,2,640,640
+test,20,90,20.089285714285715,69,66,135,51.11111111111111,48.888888888888886,,,,,448,706,2,640,640
