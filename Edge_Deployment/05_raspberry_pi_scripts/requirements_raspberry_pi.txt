@@ -1,0 +1,9 @@
+ultralytics==8.4.115
+numpy
+pandas
+psutil
+opencv-python-headless
+onnxruntime
+matplotlib
+pyyaml
+tqdm
