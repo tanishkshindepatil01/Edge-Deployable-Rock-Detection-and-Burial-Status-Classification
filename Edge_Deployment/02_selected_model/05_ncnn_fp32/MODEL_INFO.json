@@ -1,0 +1,16 @@
+{
+  "format_key": "ncnn_fp32",
+  "display_name": "NCNN FP32",
+  "selected_detector": "YOLOv8n",
+  "input_resolution": [
+    640,
+    640
+  ],
+  "batch_size": 1,
+  "local_model_path": "/content/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED/02_selected_model/05_ncnn_fp32/05_yolov8n_FP32_ncnn_model",
+  "relative_model_path": "02_selected_model/05_ncnn_fp32/05_yolov8n_FP32_ncnn_model",
+  "final_google_drive_model_path": "/content/drive/MyDrive/Rock_Burial_RaspberryPi_Edge_Deployment_FINAL_OPTIMIZED/02_selected_model/05_ncnn_fp32/05_yolov8n_FP32_ncnn_model",
+  "model_size_bytes": 12192864,
+  "model_size_mb": 11.628021240234375,
+  "purpose": "Raspberry Pi edge-format comparison using the same selected detector"
+}
