@@ -1,0 +1,7 @@
+{
+  "model": "02_selected_model/06_ncnn_fp16/06_yolov8n_FP16_ncnn_model",
+  "source_image": "03_edge_test_dataset/03_smoke_test_10/images/SMOKE_09_EDGE_TEST_083_image_416_82eb3ebe_640x640.jpg",
+  "total_rocks": 1,
+  "rock_completely_exposed": 1,
+  "rock_half_buried": 0
+}
