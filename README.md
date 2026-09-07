@@ -27,6 +27,3 @@ Visualization/     - CSV files, Tableau sheets and project visualisations
 - Sanskar Sanju Gade
 - Jitendra Suwalka
 
-## Note
-
-This repository represents an academic **proof-of-concept** for edge-deployable agricultural rock detection and is not intended as a complete autonomous field system.
