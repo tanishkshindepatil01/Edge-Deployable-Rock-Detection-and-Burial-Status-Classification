@@ -1,4 +1,4 @@
-# Edge-Deployable Rock Detection and Burial Status Classification
+# Edge Deployable Rock Detection and Burial Status Classification
 
 This project develops a lightweight computer-vision system for detecting rocks in agricultural field images and classifying them as either **completely exposed** or **half-buried**.
 
